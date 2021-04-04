@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36CC314E31A561F18871B526 /* Pods_Ulik.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56983459F219B0CF5C1A9866 /* Pods_Ulik.framework */; };
 		FA98980F261A1ED100855D36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98980E261A1ED100855D36 /* AppDelegate.swift */; };
 		FA989811261A1ED100855D36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA989810261A1ED100855D36 /* SceneDelegate.swift */; };
 		FA989813261A1ED100855D36 /* UAInitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA989812261A1ED100855D36 /* UAInitViewController.swift */; };
 		FA989818261A1ED300855D36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA989817261A1ED300855D36 /* Assets.xcassets */; };
 		FA98981B261A1ED300855D36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA989819261A1ED300855D36 /* LaunchScreen.storyboard */; };
+		FA989829261A4D8A00855D36 /* UAMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA989828261A4D8A00855D36 /* UAMainViewController.swift */; };
+		FA98982C261A4DBD00855D36 /* UAStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98982B261A4DBD00855D36 /* UAStatisticsViewController.swift */; };
+		FA98982F261A4DE900855D36 /* UAListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98982E261A4DE900855D36 /* UAListViewController.swift */; };
+		FA989832261A4E0200855D36 /* UASettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA989831261A4E0200855D36 /* UASettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		56983459F219B0CF5C1A9866 /* Pods_Ulik.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ulik.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EE5A7996F42F3D8FC63BAB1 /* Pods-Ulik.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ulik.release.xcconfig"; path = "Target Support Files/Pods-Ulik/Pods-Ulik.release.xcconfig"; sourceTree = "<group>"; };
+		A50C4C55D6D07CBD7B2C1476 /* Pods-Ulik.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ulik.debug.xcconfig"; path = "Target Support Files/Pods-Ulik/Pods-Ulik.debug.xcconfig"; sourceTree = "<group>"; };
 		FA98980B261A1ED100855D36 /* Ulik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ulik.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA98980E261A1ED100855D36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA989810261A1ED100855D36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -22,6 +30,10 @@
 		FA989817261A1ED300855D36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA98981A261A1ED300855D36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA98981C261A1ED300855D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA989828261A4D8A00855D36 /* UAMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAMainViewController.swift; sourceTree = "<group>"; };
+		FA98982B261A4DBD00855D36 /* UAStatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAStatisticsViewController.swift; sourceTree = "<group>"; };
+		FA98982E261A4DE900855D36 /* UAListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAListViewController.swift; sourceTree = "<group>"; };
+		FA989831261A4E0200855D36 /* UASettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UASettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +41,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36CC314E31A561F18871B526 /* Pods_Ulik.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B20D928234AA032B973F7504 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A50C4C55D6D07CBD7B2C1476 /* Pods-Ulik.debug.xcconfig */,
+				5EE5A7996F42F3D8FC63BAB1 /* Pods-Ulik.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BBF7E193C8E807C372A07EDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				56983459F219B0CF5C1A9866 /* Pods_Ulik.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FA989802261A1ED100855D36 = {
 			isa = PBXGroup;
 			children = (
 				FA98980D261A1ED100855D36 /* Ulik */,
 				FA98980C261A1ED100855D36 /* Products */,
+				B20D928234AA032B973F7504 /* Pods */,
+				BBF7E193C8E807C372A07EDF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +87,162 @@
 		FA98980D261A1ED100855D36 /* Ulik */ = {
 			isa = PBXGroup;
 			children = (
+				FA989845261A570800855D36 /* Rescources */,
+				FA989838261A561B00855D36 /* Settings */,
+				FA989837261A560F00855D36 /* Lists */,
+				FA989836261A55FA00855D36 /* Statistics */,
+				FA989835261A55E800855D36 /* Main */,
+				FA989834261A55C400855D36 /* Features */,
 				FA98980E261A1ED100855D36 /* AppDelegate.swift */,
 				FA989810261A1ED100855D36 /* SceneDelegate.swift */,
 				FA989812261A1ED100855D36 /* UAInitViewController.swift */,
-				FA989817261A1ED300855D36 /* Assets.xcassets */,
 				FA989819261A1ED300855D36 /* LaunchScreen.storyboard */,
 				FA98981C261A1ED300855D36 /* Info.plist */,
 			);
 			path = Ulik;
+			sourceTree = "<group>";
+		};
+		FA989834261A55C400855D36 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		FA989835261A55E800855D36 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FA989844261A56D100855D36 /* Controllers */,
+				FA989843261A56C800855D36 /* Models */,
+				FA989842261A56C000855D36 /* Views */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FA989836261A55FA00855D36 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				FA989841261A569600855D36 /* Controllers */,
+				FA989840261A568E00855D36 /* Views */,
+				FA98983F261A568700855D36 /* Models */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
+		FA989837261A560F00855D36 /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				FA98983E261A567A00855D36 /* Controllers */,
+				FA98983D261A566D00855D36 /* Views */,
+				FA98983C261A566300855D36 /* Models */,
+			);
+			path = Lists;
+			sourceTree = "<group>";
+		};
+		FA989838261A561B00855D36 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FA98983B261A565600855D36 /* Controllers */,
+				FA98983A261A564C00855D36 /* Views */,
+				FA989839261A563900855D36 /* Models */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		FA989839261A563900855D36 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA98983A261A564C00855D36 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA98983B261A565600855D36 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA989831261A4E0200855D36 /* UASettingsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FA98983C261A566300855D36 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA98983D261A566D00855D36 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA98983E261A567A00855D36 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA98982E261A4DE900855D36 /* UAListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FA98983F261A568700855D36 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA989840261A568E00855D36 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA989841261A569600855D36 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA98982B261A4DBD00855D36 /* UAStatisticsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FA989842261A56C000855D36 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA989843261A56C800855D36 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA989844261A56D100855D36 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA989828261A4D8A00855D36 /* UAMainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FA989845261A570800855D36 /* Rescources */ = {
+			isa = PBXGroup;
+			children = (
+				FA989817261A1ED300855D36 /* Assets.xcassets */,
+			);
+			path = Rescources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,10 +252,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA98981F261A1ED300855D36 /* Build configuration list for PBXNativeTarget "Ulik" */;
 			buildPhases = (
+				E513E63B3C43DBD5E9192932 /* [CP] Check Pods Manifest.lock */,
 				FA989807261A1ED100855D36 /* Sources */,
 				FA989808261A1ED100855D36 /* Frameworks */,
 				FA989809261A1ED100855D36 /* Resources */,
 				FA989823261A214A00855D36 /* SwiftLint */,
+				9A3D4D8B39FEAE42807AC0DD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,6 +313,45 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		9A3D4D8B39FEAE42807AC0DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ulik/Pods-Ulik-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ulik/Pods-Ulik-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ulik/Pods-Ulik-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E513E63B3C43DBD5E9192932 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ulik-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FA989823261A214A00855D36 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -155,9 +377,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA98982F261A4DE900855D36 /* UAListViewController.swift in Sources */,
+				FA98982C261A4DBD00855D36 /* UAStatisticsViewController.swift in Sources */,
 				FA989813261A1ED100855D36 /* UAInitViewController.swift in Sources */,
 				FA98980F261A1ED100855D36 /* AppDelegate.swift in Sources */,
 				FA989811261A1ED100855D36 /* SceneDelegate.swift in Sources */,
+				FA989832261A4E0200855D36 /* UASettingsViewController.swift in Sources */,
+				FA989829261A4D8A00855D36 /* UAMainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +519,7 @@
 		};
 		FA989820261A1ED300855D36 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A50C4C55D6D07CBD7B2C1476 /* Pods-Ulik.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -313,6 +540,7 @@
 		};
 		FA989821261A1ED300855D36 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EE5A7996F42F3D8FC63BAB1 /* Pods-Ulik.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
