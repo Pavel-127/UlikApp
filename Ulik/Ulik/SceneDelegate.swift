@@ -21,7 +21,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         self.window = window
 
+        self.setupNavBarApperance()
+
         window.makeKeyAndVisible()
     }
 
+    func setupNavBarApperance() {
+        UINavigationBar.appearance().backgroundColor = .lightGray
+    }
+
+    func changeRootViewController(_ vc: UIViewController, animated: Bool = false) {
+        guard let window = self.window else { return }
+
+        window.rootViewController = vc
+    }
 }
