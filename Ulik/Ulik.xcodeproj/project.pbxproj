@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		36CC314E31A561F18871B526 /* Pods_Ulik.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56983459F219B0CF5C1A9866 /* Pods_Ulik.framework */; };
+		FA911A78261CA4FC0059967B /* UAMainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA911A77261CA4FC0059967B /* UAMainTabBarController.swift */; };
+		FA911A7D261CA6BC0059967B /* UAInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA911A7C261CA6BC0059967B /* UAInterface.swift */; };
 		FA98980F261A1ED100855D36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98980E261A1ED100855D36 /* AppDelegate.swift */; };
 		FA989811261A1ED100855D36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA989810261A1ED100855D36 /* SceneDelegate.swift */; };
 		FA989813261A1ED100855D36 /* UAInitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA989812261A1ED100855D36 /* UAInitViewController.swift */; };
@@ -23,6 +25,8 @@
 		56983459F219B0CF5C1A9866 /* Pods_Ulik.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ulik.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE5A7996F42F3D8FC63BAB1 /* Pods-Ulik.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ulik.release.xcconfig"; path = "Target Support Files/Pods-Ulik/Pods-Ulik.release.xcconfig"; sourceTree = "<group>"; };
 		A50C4C55D6D07CBD7B2C1476 /* Pods-Ulik.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ulik.debug.xcconfig"; path = "Target Support Files/Pods-Ulik/Pods-Ulik.debug.xcconfig"; sourceTree = "<group>"; };
+		FA911A77261CA4FC0059967B /* UAMainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAMainTabBarController.swift; sourceTree = "<group>"; };
+		FA911A7C261CA6BC0059967B /* UAInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAInterface.swift; sourceTree = "<group>"; };
 		FA98980B261A1ED100855D36 /* Ulik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ulik.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA98980E261A1ED100855D36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA989810261A1ED100855D36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +58,6 @@
 				A50C4C55D6D07CBD7B2C1476 /* Pods-Ulik.debug.xcconfig */,
 				5EE5A7996F42F3D8FC63BAB1 /* Pods-Ulik.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -64,6 +67,31 @@
 				56983459F219B0CF5C1A9866 /* Pods_Ulik.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA911A76261CA4CB0059967B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FA911A7B261CA6980059967B /* Controllers */,
+				FA911A7A261CA6650059967B /* Navigation */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FA911A7A261CA6650059967B /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				FA911A7C261CA6BC0059967B /* UAInterface.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		FA911A7B261CA6980059967B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA911A77261CA4FC0059967B /* UAMainTabBarController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		FA989802261A1ED100855D36 = {
@@ -87,6 +115,7 @@
 		FA98980D261A1ED100855D36 /* Ulik */ = {
 			isa = PBXGroup;
 			children = (
+				FA911A76261CA4CB0059967B /* Common */,
 				FA989845261A570800855D36 /* Rescources */,
 				FA989838261A561B00855D36 /* Settings */,
 				FA989837261A560F00855D36 /* Lists */,
@@ -379,11 +408,13 @@
 			files = (
 				FA98982F261A4DE900855D36 /* UAListViewController.swift in Sources */,
 				FA98982C261A4DBD00855D36 /* UAStatisticsViewController.swift in Sources */,
+				FA911A78261CA4FC0059967B /* UAMainTabBarController.swift in Sources */,
 				FA989813261A1ED100855D36 /* UAInitViewController.swift in Sources */,
 				FA98980F261A1ED100855D36 /* AppDelegate.swift in Sources */,
 				FA989811261A1ED100855D36 /* SceneDelegate.swift in Sources */,
 				FA989832261A4E0200855D36 /* UASettingsViewController.swift in Sources */,
 				FA989829261A4D8A00855D36 /* UAMainViewController.swift in Sources */,
+				FA911A7D261CA6BC0059967B /* UAInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

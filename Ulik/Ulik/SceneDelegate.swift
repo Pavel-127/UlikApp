@@ -4,7 +4,6 @@
 //
 //  Created by macbook on 4/4/21.
 //
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -17,22 +16,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(frame: scene.coordinateSpace.bounds)
         window.windowScene = scene
 
-        window.rootViewController = UINavigationController(rootViewController: UAInitViewController())
+        window.rootViewController = UAMainTabBarController()
 
         self.window = window
 
-        self.setupNavBarApperance()
-
         window.makeKeyAndVisible()
-    }
-
-    func setupNavBarApperance() {
-        UINavigationBar.appearance().backgroundColor = .lightGray
-    }
-
-    func changeRootViewController(_ vc: UIViewController, animated: Bool = false) {
-        guard let window = self.window else { return }
-
-        window.rootViewController = vc
     }
 }
