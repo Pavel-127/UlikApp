@@ -11,8 +11,9 @@ class UASettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.view.backgroundColor = .blue
+        self.title = "Настройки"
+        self.view.backgroundColor = .white
+//        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
 }
