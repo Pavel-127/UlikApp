@@ -6,6 +6,7 @@
 //
 import UIKit
 
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -15,6 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(frame: scene.coordinateSpace.bounds)
         window.windowScene = scene
+      
 
         window.rootViewController = UAMainTabBarController()
 
