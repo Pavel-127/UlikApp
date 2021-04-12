@@ -38,7 +38,6 @@ class UAMainTabBarController: UITabBarController {
         return view
     }()
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
