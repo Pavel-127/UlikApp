@@ -6,16 +6,17 @@
 //
 
 import UIKit
+import Firebase
 
 class UALoginViewController: UIViewController {
 
-    private lazy var nameTextField: UITextField = {
-        let name = UITextField()
-        name.placeholder = "Введите имя пользователя"
-        name.backgroundColor = .lightGray
-        name.translatesAutoresizingMaskIntoConstraints = false
+    private lazy var emailTextField: UITextField = {
+        let email = UITextField()
+        email.placeholder = "Введите Email"
+        email.backgroundColor = .lightGray
+        email.translatesAutoresizingMaskIntoConstraints = false
 
-        return name
+        return email
     }()
 
     private lazy var passwordTextField: UITextField = {
@@ -42,7 +43,7 @@ class UALoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-        self.view.addSubview(nameTextField)
+        self.view.addSubview(emailTextField)
         self.view.addSubview(passwordTextField)
         self.view.addSubview(loginButton)
         self.updateViewConstraints()
@@ -50,14 +51,14 @@ class UALoginViewController: UIViewController {
 
     override func updateViewConstraints() {
 
-        self.nameTextField.snp.updateConstraints { (make) in
+        self.emailTextField.snp.updateConstraints { (make) in
             make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(100)
             make.left.right.equalToSuperview().inset(25)
             make.height.equalTo(35)
         }
 
         self.passwordTextField.snp.updateConstraints { (make) in
-            make.top.equalTo(self.nameTextField.snp.bottom).offset(20)
+            make.top.equalTo(self.emailTextField.snp.bottom).offset(20)
             make.left.right.equalToSuperview().inset(25)
             make.height.equalTo(35)
         }
@@ -71,6 +72,33 @@ class UALoginViewController: UIViewController {
     }
 
     @objc private func loginButtonTapped() {
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(UAMainTabBarController())
+        let email = emailTextField.text!
+        let password = passwordTextField.text!
+
+        if (!email.isEmpty && !password.isEmpty) {
+            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+                if error == nil {
+                    (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(UAMainTabBarController())
+                } else {
+                    (email != email && password != password)
+                    self.showErrorLoginAndEmailAlert()
+                }
+            }
+        } else {
+            self.showErrorAlert()
+        }
+
+    }
+
+    private func showErrorAlert() {
+        let alert = UIAlertController(title: "Ошибка", message: "Заполните все поля", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+
+    private func showErrorLoginAndEmailAlert() {
+        let alert = UIAlertController(title: "Ошибка", message: "Неверные данные пользователя", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }

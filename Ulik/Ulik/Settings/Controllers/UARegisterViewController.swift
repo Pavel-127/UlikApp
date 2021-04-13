@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class UARegisterViewController: UIViewController {
 
@@ -22,6 +23,7 @@ class UARegisterViewController: UIViewController {
         let email = UITextField()
         email.placeholder = "Введите Email"
         email.backgroundColor = .lightGray
+        email.keyboardType = .emailAddress
         email.translatesAutoresizingMaskIntoConstraints = false
 
         return email
@@ -56,6 +58,9 @@ class UARegisterViewController: UIViewController {
         self.view.addSubview(emailTextField)
         self.view.addSubview(passwordTextField)
         self.view.addSubview(registerButton)
+        nameTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
 
         self.updateViewConstraints()
     }
@@ -89,6 +94,36 @@ class UARegisterViewController: UIViewController {
     }
 
     @objc private func registerButtonTapped() {
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(UAMainTabBarController())
+        let name = nameTextField.text!
+        let email = emailTextField.text!
+        let password = passwordTextField.text!
+
+        if (!name.isEmpty && !email.isEmpty && !password.isEmpty) {
+            Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+                if error == nil {
+                    if let result = result {
+                        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(UALoginViewController())
+                        let ref = Database.database().reference().child("users")
+                        ref.child(result.user.uid).updateChildValues(["name" : name, "email" : email])
+                    }
+                }
+            }
+        } else {
+            self.showErrorAlert()
+        }
+
+    }
+
+    private func showErrorAlert() {
+        let alert = UIAlertController(title: "Ошибка", message: "Заполните все поля", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+}
+
+extension UARegisterViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+
+        return true
     }
 }
