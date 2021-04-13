@@ -18,16 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         Auth.auth().addStateDidChangeListener { (auth, user) in
             if user == nil {
-                
+
             }
         }
+
 
         self.window = UIWindow(frame: UIScreen.main.bounds)
 
         return true
     }
-//
-//    private func showModalAuth() {
-//        let
-//    }
 }
