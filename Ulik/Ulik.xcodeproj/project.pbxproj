@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		36CC314E31A561F18871B526 /* Pods_Ulik.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56983459F219B0CF5C1A9866 /* Pods_Ulik.framework */; };
+		FA0224A52625E58C00539E19 /* UALoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0224A42625E58C00539E19 /* UALoginViewController.swift */; };
+		FA0224A82625E5A100539E19 /* UARegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0224A72625E5A100539E19 /* UARegisterViewController.swift */; };
 		FA34AE792623957E0077AD39 /* UAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA34AE782623957E0077AD39 /* UAViewController.swift */; };
 		FA911A78261CA4FC0059967B /* UAMainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA911A77261CA4FC0059967B /* UAMainTabBarController.swift */; };
 		FA911A7D261CA6BC0059967B /* UAInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA911A7C261CA6BC0059967B /* UAInterface.swift */; };
@@ -27,6 +29,8 @@
 		56983459F219B0CF5C1A9866 /* Pods_Ulik.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ulik.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE5A7996F42F3D8FC63BAB1 /* Pods-Ulik.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ulik.release.xcconfig"; path = "Target Support Files/Pods-Ulik/Pods-Ulik.release.xcconfig"; sourceTree = "<group>"; };
 		A50C4C55D6D07CBD7B2C1476 /* Pods-Ulik.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ulik.debug.xcconfig"; path = "Target Support Files/Pods-Ulik/Pods-Ulik.debug.xcconfig"; sourceTree = "<group>"; };
+		FA0224A42625E58C00539E19 /* UALoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UALoginViewController.swift; sourceTree = "<group>"; };
+		FA0224A72625E5A100539E19 /* UARegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UARegisterViewController.swift; sourceTree = "<group>"; };
 		FA34AE782623957E0077AD39 /* UAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAViewController.swift; sourceTree = "<group>"; };
 		FA911A77261CA4FC0059967B /* UAMainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAMainTabBarController.swift; sourceTree = "<group>"; };
 		FA911A7C261CA6BC0059967B /* UAInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAInterface.swift; sourceTree = "<group>"; };
@@ -202,6 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				FA989831261A4E0200855D36 /* UASettingsViewController.swift */,
+				FA0224A42625E58C00539E19 /* UALoginViewController.swift */,
+				FA0224A72625E5A100539E19 /* UARegisterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -417,8 +423,10 @@
 				FA98982C261A4DBD00855D36 /* UAStatisticsViewController.swift in Sources */,
 				FA911A78261CA4FC0059967B /* UAMainTabBarController.swift in Sources */,
 				FA989813261A1ED100855D36 /* UAInitViewController.swift in Sources */,
+				FA0224A52625E58C00539E19 /* UALoginViewController.swift in Sources */,
 				FA34AE792623957E0077AD39 /* UAViewController.swift in Sources */,
 				FA98980F261A1ED100855D36 /* AppDelegate.swift in Sources */,
+				FA0224A82625E5A100539E19 /* UARegisterViewController.swift in Sources */,
 				FA989811261A1ED100855D36 /* SceneDelegate.swift in Sources */,
 				FA989832261A4E0200855D36 /* UASettingsViewController.swift in Sources */,
 				FA989829261A4D8A00855D36 /* UAMainViewController.swift in Sources */,
