@@ -1,0 +1,106 @@
+//
+//  UAMainCell.swift
+//  Ulik
+//
+//  Created by macbook on 4/14/21.
+//
+
+import UIKit
+
+class UAMainCell: UITableViewCell {
+
+    static let reuseIdentifier: String = "UAMainCell"
+
+    private lazy var containerView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .white
+        view.layer.cornerRadius = 15
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOpacity = 0.5
+        view.layer.shadowRadius = 10
+        view.clipsToBounds = false
+        view.layer.shadowOffset = CGSize(width: 0, height: 0)
+
+        return view
+    }()
+
+    private lazy var mainImageView: UIImageView = {
+        let image = UIImageView()
+        image.image = UIImage(named: "auto")
+        image.translatesAutoresizingMaskIntoConstraints = false
+
+        return image
+    }()
+
+    private lazy var imageName: UILabel = {
+        let name = UILabel()
+        name.text = "Транспорт"
+        name.font = UIFont.boldSystemFont(ofSize: 25)
+        name.translatesAutoresizingMaskIntoConstraints = false
+
+        return name
+    }()
+
+    private lazy var summLabel: UILabel = {
+        let summ = UILabel()
+        summ.text = "210.60"
+        summ.font = UIFont.boldSystemFont(ofSize: 25)
+        summ.translatesAutoresizingMaskIntoConstraints = false
+
+        return summ
+    }()
+
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+
+        self.initCell()
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    func initCell() {
+        self.contentView.addSubview(self.containerView)
+        self.containerView.addSubview(self.mainImageView)
+        self.containerView.addSubview(self.imageName)
+        self.contentView.addSubview(self.summLabel)
+
+
+
+        self.setNeedsUpdateConstraints()
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+    }
+    override func updateConstraints() {
+        self.containerView.snp.updateConstraints { (make) in
+            make.top.equalToSuperview()
+            make.left.right.equalToSuperview().inset(15)
+        }
+
+        self.mainImageView.snp.updateConstraints { (make) in
+            make.width.equalTo(55)
+            make.height.equalTo(45)
+            make.top.equalToSuperview()
+            make.left.equalToSuperview().inset(20)
+        }
+
+        self.imageName.snp.updateConstraints { (make) in
+            make.top.equalToSuperview().inset(5)
+            make.left.equalTo(self.mainImageView.snp.right).offset(20)
+        }
+
+        self.summLabel.snp.updateConstraints { (make) in
+            make.top.equalToSuperview().inset(5)
+            make.right.equalToSuperview().inset(20)
+        }
+
+        super.updateConstraints()
+    }
+
+    
+}
