@@ -22,16 +22,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.makeKeyAndVisible()
     }
     func changeRootViewController(_ vc: UIViewController, animated: Bool = true) {
-            guard let window = self.window else { return }
+        guard let window = self.window else { return }
 
-            window.rootViewController = vc
+        window.rootViewController = vc
 
-            if animated {
-                UIView.transition(with: window,
-                                  duration: 0.5,
-                                  options: .transitionCrossDissolve,
-                                  animations: nil)
-            }
+        if animated {
+            UIView.transition(with: window,
+                              duration: 0.5,
+                              options: .transitionCrossDissolve,
+                              animations: nil)
         }
+    }
 
 }
