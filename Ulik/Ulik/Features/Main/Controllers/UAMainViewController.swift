@@ -12,20 +12,22 @@ class UAMainViewController: UITableViewController {
     private let categories: [String] = [
     ]
 
-    private lazy var backgroundImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "background")
-        imageView.contentMode = .scaleAspectFill
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.alpha = 0.5
-
-        return imageView
-    }()
+//    private lazy var backgroundImageView: UIImageView = {
+//        let imageView = UIImageView()
+//        imageView.image = UIImage(named: "background")
+//        imageView.contentMode = .scaleAspectFill
+//        imageView.translatesAutoresizingMaskIntoConstraints = false
+//        imageView.alpha = 0.5
+//
+//        return imageView
+//    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.white
+        self.navigationItem.title = "Главная"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
 
-        self.title = "Главная"
         self.tableView.separatorStyle = .none
 
         let addButton = UIBarButtonItem(systemItem: .add)
@@ -35,24 +37,22 @@ class UAMainViewController: UITableViewController {
         self.tableView.register(UAMainCell.self,
                                 forCellReuseIdentifier: UAMainCell.reuseIdentifier)
 
-        self.view.backgroundColor = .white
-
-//        self.view.addSubview(backgroundImageView)
+//                self.view.addSubview(backgroundImageView)
 //
-//        self.backgroundImageView.snp.makeConstraints { (make) in
-//            make.edges.equalToSuperview()
-//        }
+//                self.backgroundImageView.snp.makeConstraints { (make) in
+//                    make.edges.equalToSuperview()
+//                }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: UAMainCell.reuseIdentifier, for: indexPath)
-//        cell.backgroundColor = .white
+        //        cell.backgroundColor = .white
 
-return cell
+        return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -61,8 +61,6 @@ return cell
                                       preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
-
-        
     }
 
 }

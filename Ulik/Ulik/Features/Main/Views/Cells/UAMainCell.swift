@@ -36,7 +36,7 @@ class UAMainCell: UITableViewCell {
     private lazy var imageName: UILabel = {
         let name = UILabel()
         name.text = "Транспорт"
-        name.font = UIFont.boldSystemFont(ofSize: 25)
+        name.font = UIFont.boldSystemFont(ofSize: 20)
         name.translatesAutoresizingMaskIntoConstraints = false
 
         return name
@@ -45,7 +45,7 @@ class UAMainCell: UITableViewCell {
     private lazy var summLabel: UILabel = {
         let summ = UILabel()
         summ.text = "210.60"
-        summ.font = UIFont.boldSystemFont(ofSize: 25)
+        summ.font = UIFont.boldSystemFont(ofSize: 20)
         summ.translatesAutoresizingMaskIntoConstraints = false
 
         return summ
@@ -65,9 +65,7 @@ class UAMainCell: UITableViewCell {
         self.contentView.addSubview(self.containerView)
         self.containerView.addSubview(self.mainImageView)
         self.containerView.addSubview(self.imageName)
-        self.contentView.addSubview(self.summLabel)
-
-
+        self.containerView.addSubview(self.summLabel)
 
         self.setNeedsUpdateConstraints()
     }
@@ -78,29 +76,30 @@ class UAMainCell: UITableViewCell {
     }
     override func updateConstraints() {
         self.containerView.snp.updateConstraints { (make) in
-            make.top.equalToSuperview()
-            make.left.right.equalToSuperview().inset(15)
+            make.top.equalToSuperview().inset(20)
+            make.left.right.equalToSuperview().inset(5)
+            make.bottom.equalToSuperview().inset(15)
+            make.height.equalTo(90)
         }
 
         self.mainImageView.snp.updateConstraints { (make) in
             make.width.equalTo(55)
             make.height.equalTo(45)
-            make.top.equalToSuperview()
-            make.left.equalToSuperview().inset(20)
+            make.top.equalToSuperview().inset(10)
+            make.left.equalToSuperview().inset(40)
         }
 
         self.imageName.snp.updateConstraints { (make) in
-            make.top.equalToSuperview().inset(5)
-            make.left.equalTo(self.mainImageView.snp.right).offset(20)
+            make.top.equalTo(self.mainImageView.snp.bottom).offset(5)
+            make.left.equalToSuperview().inset(20)
         }
 
         self.summLabel.snp.updateConstraints { (make) in
-            make.top.equalToSuperview().inset(5)
+            make.top.bottom.equalToSuperview().inset(15)
             make.right.equalToSuperview().inset(20)
         }
 
         super.updateConstraints()
     }
 
-    
 }

@@ -19,22 +19,25 @@ class UAMainTabBarController: UITabBarController {
 
     private lazy var statisticsTabBarItem: UITabBarItem = {
         let view = UITabBarItem(title: "Статистика",
-                                 image: UIImage(systemName: "chart.bar.xaxis"),
-                                 selectedImage: UIImage(systemName: "chart.bar.xaxis.fill"))
+                                image: UIImage(systemName: "chart.bar.xaxis"),
+                                selectedImage: UIImage(systemName: "chart.bar.xaxis.fill"))
+
         return view
     }()
 
     private lazy var listTabBarItem: UITabBarItem = {
         let view = UITabBarItem(title: "Списки",
-                                 image: UIImage(systemName: "newspaper"),
-                                 selectedImage: UIImage(systemName: "newspaper.fill"))
+                                image: UIImage(systemName: "newspaper"),
+                                selectedImage: UIImage(systemName: "newspaper.fill"))
+
         return view
     }()
 
     private lazy var settingsTabBarItem: UITabBarItem = {
         let view = UITabBarItem(title: "Настройки",
-                                 image: UIImage(systemName: "gear"),
-                                 selectedImage: UIImage(systemName: "gear.fill"))
+                                image: UIImage(systemName: "gear"),
+                                selectedImage: UIImage(systemName: "gear.fill"))
+
         return view
     }()
 
