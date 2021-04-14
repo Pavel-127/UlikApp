@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UAMainViewController: UIViewController {
+class UAMainViewController: UITableViewController {
 
     private lazy var backgroundImageView: UIImageView = {
         let imageView = UIImageView()
