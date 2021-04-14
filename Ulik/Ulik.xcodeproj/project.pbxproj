@@ -45,6 +45,7 @@
 		FA98982B261A4DBD00855D36 /* UAStatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAStatisticsViewController.swift; sourceTree = "<group>"; };
 		FA98982E261A4DE900855D36 /* UAListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAListViewController.swift; sourceTree = "<group>"; };
 		FA989831261A4E0200855D36 /* UASettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UASettingsViewController.swift; sourceTree = "<group>"; };
+		FABDC7D326273C0F0069B918 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = ../../../../../Desktop/MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FACFA8E92623639200C7C943 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +126,7 @@
 		FA98980D261A1ED100855D36 /* Ulik */ = {
 			isa = PBXGroup;
 			children = (
+				FABDC7D226273C000069B918 /* Playground */,
 				FA911A76261CA4CB0059967B /* Common */,
 				FA989845261A570800855D36 /* Rescources */,
 				FA989835261A55E800855D36 /* Main */,
@@ -284,6 +286,14 @@
 				FA989817261A1ED300855D36 /* Assets.xcassets */,
 			);
 			path = Rescources;
+			sourceTree = "<group>";
+		};
+		FABDC7D226273C000069B918 /* Playground */ = {
+			isa = PBXGroup;
+			children = (
+				FABDC7D326273C0F0069B918 /* MyPlayground.playground */,
+			);
+			path = Playground;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
