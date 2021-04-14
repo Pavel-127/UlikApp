@@ -23,6 +23,7 @@
 		FA98982F261A4DE900855D36 /* UAListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98982E261A4DE900855D36 /* UAListViewController.swift */; };
 		FA989832261A4E0200855D36 /* UASettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA989831261A4E0200855D36 /* UASettingsViewController.swift */; };
 		FABABF592627527A00923B46 /* UAMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABABF582627527A00923B46 /* UAMainCell.swift */; };
+		FABABF5E2627770E00923B46 /* UACurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABABF5D2627770E00923B46 /* UACurrency.swift */; };
 		FACFA8EA2623639200C7C943 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FACFA8E92623639200C7C943 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		FA98982E261A4DE900855D36 /* UAListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAListViewController.swift; sourceTree = "<group>"; };
 		FA989831261A4E0200855D36 /* UASettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UASettingsViewController.swift; sourceTree = "<group>"; };
 		FABABF582627527A00923B46 /* UAMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAMainCell.swift; sourceTree = "<group>"; };
+		FABABF5D2627770E00923B46 /* UACurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UACurrency.swift; sourceTree = "<group>"; };
 		FABDC7D326273C0F0069B918 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = ../../../../../Desktop/MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FACFA8E92623639200C7C943 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,10 +133,6 @@
 				FABDC7D226273C000069B918 /* Playground */,
 				FA911A76261CA4CB0059967B /* Common */,
 				FA989845261A570800855D36 /* Rescources */,
-				FA989835261A55E800855D36 /* Main */,
-				FA989836261A55FA00855D36 /* Statistics */,
-				FA989837261A560F00855D36 /* Lists */,
-				FA989838261A561B00855D36 /* Settings */,
 				FA989834261A55C400855D36 /* Features */,
 				FA98980E261A1ED100855D36 /* AppDelegate.swift */,
 				FA989810261A1ED100855D36 /* SceneDelegate.swift */,
@@ -148,6 +146,10 @@
 		FA989834261A55C400855D36 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				FA989837261A560F00855D36 /* Lists */,
+				FA989838261A561B00855D36 /* Settings */,
+				FA989836261A55FA00855D36 /* Statistics */,
+				FA989835261A55E800855D36 /* Main */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -195,6 +197,7 @@
 		FA989839261A563900855D36 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FABABF5D2627770E00923B46 /* UACurrency.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 			files = (
 				FA98982F261A4DE900855D36 /* UAListViewController.swift in Sources */,
 				FA98982C261A4DBD00855D36 /* UAStatisticsViewController.swift in Sources */,
+				FABABF5E2627770E00923B46 /* UACurrency.swift in Sources */,
 				FA911A78261CA4FC0059967B /* UAMainTabBarController.swift in Sources */,
 				FABABF592627527A00923B46 /* UAMainCell.swift in Sources */,
 				FA989813261A1ED100855D36 /* UAInitViewController.swift in Sources */,
