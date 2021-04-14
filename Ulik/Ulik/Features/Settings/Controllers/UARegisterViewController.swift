@@ -52,7 +52,11 @@ class UARegisterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "Регистрация"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        let addButton = UIBarButtonItem(systemItem: .cancel)
+        self.navigationItem.setRightBarButton(addButton,
+                                              animated: false)
         self.view.backgroundColor = .white
         self.view.addSubview(nameTextField)
         self.view.addSubview(emailTextField)
@@ -97,7 +101,6 @@ class UARegisterViewController: UIViewController {
         let name = nameTextField.text!
         let email = emailTextField.text!
         let password = passwordTextField.text!
-
         if (!name.isEmpty && !email.isEmpty && !password.isEmpty) {
             Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
                 if error == nil {
@@ -111,7 +114,6 @@ class UARegisterViewController: UIViewController {
         } else {
             self.showErrorAlert()
         }
-
     }
 
     private func showErrorAlert() {

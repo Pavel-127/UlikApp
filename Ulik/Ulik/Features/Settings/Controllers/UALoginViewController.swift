@@ -8,7 +8,7 @@
 import UIKit
 import Firebase
 
-class UALoginViewController: UIViewController {
+class UALoginViewController: UIViewController, UITextFieldDelegate {
 
     private lazy var emailTextField: UITextField = {
         let email = UITextField()
@@ -42,10 +42,17 @@ class UALoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Вход"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        let addButton = UIBarButtonItem(systemItem: .cancel)
+        self.navigationItem.setRightBarButton(addButton,
+                                              animated: false)
         self.view.backgroundColor = .white
         self.view.addSubview(emailTextField)
         self.view.addSubview(passwordTextField)
         self.view.addSubview(loginButton)
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
         self.updateViewConstraints()
     }
 
@@ -74,7 +81,6 @@ class UALoginViewController: UIViewController {
     @objc private func loginButtonTapped() {
         let email = emailTextField.text!
         let password = passwordTextField.text!
-
         if (!email.isEmpty && !password.isEmpty) {
             Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
                 if error == nil {
@@ -87,7 +93,6 @@ class UALoginViewController: UIViewController {
         } else {
             self.showErrorAlert()
         }
-
     }
 
     private func showErrorAlert() {
