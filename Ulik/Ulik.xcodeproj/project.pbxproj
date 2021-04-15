@@ -24,6 +24,7 @@
 		FA989832261A4E0200855D36 /* UASettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA989831261A4E0200855D36 /* UASettingsViewController.swift */; };
 		FABABF592627527A00923B46 /* UAMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABABF582627527A00923B46 /* UAMainCell.swift */; };
 		FABABF5E2627770E00923B46 /* UACurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABABF5D2627770E00923B46 /* UACurrency.swift */; };
+		FACC4D7F262872A900D7C5C5 /* UATransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4D7E262872A900D7C5C5 /* UATransport.swift */; };
 		FACFA8EA2623639200C7C943 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FACFA8E92623639200C7C943 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		FABABF582627527A00923B46 /* UAMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAMainCell.swift; sourceTree = "<group>"; };
 		FABABF5D2627770E00923B46 /* UACurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UACurrency.swift; sourceTree = "<group>"; };
 		FABDC7D326273C0F0069B918 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = ../../../../../Desktop/MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FACC4D7E262872A900D7C5C5 /* UATransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UATransport.swift; sourceTree = "<group>"; };
 		FACFA8E92623639200C7C943 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -274,6 +276,7 @@
 		FA989843261A56C800855D36 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FACC4D7E262872A900D7C5C5 /* UATransport.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				FA0224A52625E58C00539E19 /* UALoginViewController.swift in Sources */,
 				FA34AE792623957E0077AD39 /* UAViewController.swift in Sources */,
 				FA98980F261A1ED100855D36 /* AppDelegate.swift in Sources */,
+				FACC4D7F262872A900D7C5C5 /* UATransport.swift in Sources */,
 				FA0224A82625E5A100539E19 /* UARegisterViewController.swift in Sources */,
 				FA989811261A1ED100855D36 /* SceneDelegate.swift in Sources */,
 				FA989832261A4E0200855D36 /* UASettingsViewController.swift in Sources */,
