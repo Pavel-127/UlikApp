@@ -9,7 +9,18 @@ import UIKit
 
 class UAMainViewController: UITableViewController {
 
-    private let categories: [String] = [
+    private var categories: [UACategories] = [
+        UACategories(title: "Транспорт",
+                     description: "0"),
+        UACategories(title: "Отдых",
+                     description: "0"),
+        UACategories(title: "Продукты",
+                     description: "0"),
+        UACategories(title: "Разное",
+                     description: "0"),
+        UACategories(title: "ЖКХ",
+                     description: "0")
+
     ]
 
 //    private lazy var backgroundImageView: UIImageView = {
@@ -45,13 +56,13 @@ class UAMainViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return self.categories.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: UAMainCell.reuseIdentifier, for: indexPath)
-        //        cell.backgroundColor = .white
+        let cell = tableView.dequeueReusableCell(withIdentifier: UAMainCell.reuseIdentifier, for: indexPath) as? UAMainCell ?? UAMainCell()
 
+        cell.setCell(model: self.categories[indexPath.row])
         return cell
     }
 
