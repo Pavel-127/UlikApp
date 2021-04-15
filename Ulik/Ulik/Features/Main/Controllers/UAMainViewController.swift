@@ -74,4 +74,15 @@ class UAMainViewController: UITableViewController {
         self.present(alert, animated: true, completion: nil)
     }
 
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        switch editingStyle {
+        case.delete:
+            self.categories.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        case.insert:
+            print("insert")
+        default:
+            break
+        }
+    }
 }
