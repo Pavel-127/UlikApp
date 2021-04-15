@@ -21,6 +21,8 @@ class UAMainCell: UITableViewCell {
         view.layer.shadowRadius = 10
         view.clipsToBounds = false
         view.layer.shadowOffset = CGSize(width: 0, height: 0)
+        view.layer.shouldRasterize = true
+        view.layer.rasterizationScale = UIScreen.main.scale
 
         return view
     }()
