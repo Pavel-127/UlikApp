@@ -88,7 +88,7 @@ class UAMainCell: UITableViewCell {
             make.width.equalTo(55)
             make.height.equalTo(45)
             make.top.equalToSuperview().inset(10)
-            make.left.equalToSuperview().inset(40)
+            make.left.equalToSuperview().inset(20)
         }
 
         self.imageName.snp.updateConstraints { (make) in
@@ -102,6 +102,13 @@ class UAMainCell: UITableViewCell {
         }
 
         super.updateConstraints()
+    }
+
+    func setCell(model: UACategories) {
+        self.imageName.text = model.title
+        self.summLabel.text = model.description
+
+        self.setNeedsUpdateConstraints()
     }
 
 }
