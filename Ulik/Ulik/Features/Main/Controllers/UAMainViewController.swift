@@ -9,29 +9,42 @@ import UIKit
 
 class UAMainViewController: UITableViewController {
 
+    let addButton = UIBarButtonItem(systemItem: .add)
+
     private var categories: [UACategories] = [
-        UACategories(title: "Транспорт",
-                     description: "0"),
-        UACategories(title: "Отдых",
-                     description: "0"),
-        UACategories(title: "Продукты",
-                     description: "0"),
-        UACategories(title: "Разное",
-                     description: "0"),
-        UACategories(title: "ЖКХ",
-                     description: "0")
-
-    ]
-
-//    private lazy var backgroundImageView: UIImageView = {
-//        let imageView = UIImageView()
-//        imageView.image = UIImage(named: "background")
-//        imageView.contentMode = .scaleAspectFill
-//        imageView.translatesAutoresizingMaskIntoConstraints = false
-//        imageView.alpha = 0.5
-//
-//        return imageView
-//    }()
+        UACategories(image: UIImage(named: "produkt"),
+                     title: "Продукты",
+                     description: "111.1",
+                     amount: 0.0),
+        UACategories(image: UIImage(named: "JKH"),
+                     title: "Коммунальные платежи",
+                     description: "111.1",
+                     amount: 0.0),
+        UACategories(image: UIImage(named: "auto"),
+                     title: "Личный авто",
+                     description: "111.1",
+                     amount: 0.0),
+        UACategories(image: UIImage(named: "med"),
+                     title: "Здоровье",
+                     description: "111.1",
+                     amount: 0.0),
+        UACategories(image: UIImage(named: "publik transport"),
+                     title: "Общественный транспорт",
+                     description: "111.1",
+                     amount: 0.0),
+        UACategories(image: UIImage(named: "beauty"),
+                     title: "Красота",
+                     description: "111.1",
+                     amount: 0.0),
+        UACategories(image: UIImage(named: "relax"),
+                     title: "Отдых",
+                     description: "111.1",
+                     amount: 0.0),
+        UACategories(image: UIImage(named: "costs"),
+                     title: "Иные расходы",
+                     description: "111.1",
+                     amount: 0.0)
+]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,18 +54,12 @@ class UAMainViewController: UITableViewController {
 
         self.tableView.separatorStyle = .none
 
-        let addButton = UIBarButtonItem(systemItem: .add)
         self.navigationItem.setRightBarButton(addButton,
                                               animated: false)
 
         self.tableView.register(UAMainCell.self,
                                 forCellReuseIdentifier: UAMainCell.reuseIdentifier)
 
-//                self.view.addSubview(backgroundImageView)
-//
-//                self.backgroundImageView.snp.makeConstraints { (make) in
-//                    make.edges.equalToSuperview()
-//                }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -67,11 +74,23 @@ class UAMainViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let alert = UIAlertController(title: "Введите сумму",
-                                      message: "",
-                                      preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+
+        let alertController = UIAlertController(title: "Введите сумму", message: "", preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title: "OK", style: .default) { (_) in
+            if let summTextField = alertController.textFields?[0] {
+            }
+        }
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
+
+        alertController.addTextField { (textField) in
+            textField.placeholder = "сумма"
+        }
+
+        alertController.addAction(cancelAction)
+        alertController.addAction(confirmAction)
+
+        present(alertController, animated: true, completion: nil)
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

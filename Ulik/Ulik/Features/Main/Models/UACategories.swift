@@ -10,7 +10,9 @@ import UIKit
 
 struct UACategories {
     let id = UUID()
-//    let image: UIImage?
+    let image: UIImage?
     let title: String
     var description: String
+
+    var amount: Double?
 }

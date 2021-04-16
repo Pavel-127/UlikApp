@@ -29,7 +29,6 @@ class UAMainCell: UITableViewCell {
 
     private lazy var mainImageView: UIImageView = {
         let image = UIImageView()
-        image.image = UIImage(named: "auto")
         image.translatesAutoresizingMaskIntoConstraints = false
 
         return image
@@ -37,7 +36,6 @@ class UAMainCell: UITableViewCell {
 
     private lazy var imageName: UILabel = {
         let name = UILabel()
-        name.text = "Транспорт"
         name.font = UIFont.boldSystemFont(ofSize: 20)
         name.translatesAutoresizingMaskIntoConstraints = false
 
@@ -46,7 +44,6 @@ class UAMainCell: UITableViewCell {
 
     private lazy var summLabel: UILabel = {
         let summ = UILabel()
-        summ.text = "210.60"
         summ.font = UIFont.boldSystemFont(ofSize: 20)
         summ.translatesAutoresizingMaskIntoConstraints = false
 
@@ -107,6 +104,7 @@ class UAMainCell: UITableViewCell {
     func setCell(model: UACategories) {
         self.imageName.text = model.title
         self.summLabel.text = model.description
+        self.mainImageView.image = model.image
 
         self.setNeedsUpdateConstraints()
     }
