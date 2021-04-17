@@ -24,6 +24,7 @@
 		FA989832261A4E0200855D36 /* UASettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA989831261A4E0200855D36 /* UASettingsViewController.swift */; };
 		FABABF592627527A00923B46 /* UAMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABABF582627527A00923B46 /* UAMainCell.swift */; };
 		FABABF5E2627770E00923B46 /* UACurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABABF5D2627770E00923B46 /* UACurrency.swift */; };
+		FAC706B7262B5C2A00BBA2B9 /* UAStatisticsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC706B6262B5C2A00BBA2B9 /* UAStatisticsCell.swift */; };
 		FACC4D7F262872A900D7C5C5 /* UACategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4D7E262872A900D7C5C5 /* UACategories.swift */; };
 		FACFA8EA2623639200C7C943 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FACFA8E92623639200C7C943 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		FABABF582627527A00923B46 /* UAMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAMainCell.swift; sourceTree = "<group>"; };
 		FABABF5D2627770E00923B46 /* UACurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UACurrency.swift; sourceTree = "<group>"; };
 		FABDC7D326273C0F0069B918 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = ../../../../../Desktop/MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FAC706B6262B5C2A00BBA2B9 /* UAStatisticsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAStatisticsCell.swift; sourceTree = "<group>"; };
 		FACC4D7E262872A900D7C5C5 /* UACategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UACategories.swift; sourceTree = "<group>"; };
 		FACFA8E92623639200C7C943 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -253,6 +255,7 @@
 		FA989840261A568E00855D36 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FAC706B5262B5BF900BBA2B9 /* Cell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -311,6 +314,14 @@
 				FABDC7D326273C0F0069B918 /* MyPlayground.playground */,
 			);
 			path = Playground;
+			sourceTree = "<group>";
+		};
+		FAC706B5262B5BF900BBA2B9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FAC706B6262B5C2A00BBA2B9 /* UAStatisticsCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -448,6 +459,7 @@
 			files = (
 				FA98982F261A4DE900855D36 /* UAListViewController.swift in Sources */,
 				FA98982C261A4DBD00855D36 /* UAStatisticsViewController.swift in Sources */,
+				FAC706B7262B5C2A00BBA2B9 /* UAStatisticsCell.swift in Sources */,
 				FABABF5E2627770E00923B46 /* UACurrency.swift in Sources */,
 				FA911A78261CA4FC0059967B /* UAMainTabBarController.swift in Sources */,
 				FABABF592627527A00923B46 /* UAMainCell.swift in Sources */,
