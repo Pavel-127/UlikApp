@@ -99,11 +99,11 @@ class UASettingsViewController: UIViewController {
     }
 
     @objc private func loginButtonTapped() {
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(UALoginViewController())
+        navigationController?.pushViewController(UALoginViewController(), animated: true)
     }
 
     @objc private func registerButtonTapped() {
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(UARegisterViewController())
+        navigationController?.pushViewController(UARegisterViewController(), animated: true)
     }
 
     @objc private func doneTapped() {

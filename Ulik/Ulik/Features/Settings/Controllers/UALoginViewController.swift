@@ -13,7 +13,7 @@ class UALoginViewController: UIViewController, UITextFieldDelegate {
     private lazy var emailTextField: UITextField = {
         let email = UITextField()
         email.placeholder = "Введите Email"
-        email.backgroundColor = .lightGray
+        email.borderStyle = .roundedRect
         email.translatesAutoresizingMaskIntoConstraints = false
 
         return email
@@ -22,7 +22,7 @@ class UALoginViewController: UIViewController, UITextFieldDelegate {
     private lazy var passwordTextField: UITextField = {
         let password = UITextField()
         password.placeholder = "Введите пароль"
-        password.backgroundColor = .lightGray
+        password.borderStyle = .roundedRect
         password.isSecureTextEntry = true
         password.translatesAutoresizingMaskIntoConstraints = false
 
@@ -43,10 +43,6 @@ class UALoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Вход"
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        let addButton = UIBarButtonItem(systemItem: .cancel)
-        self.navigationItem.setRightBarButton(addButton,
-                                              animated: false)
         self.view.backgroundColor = .white
         self.view.addSubview(emailTextField)
         self.view.addSubview(passwordTextField)
