@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UAStatisticsViewController: UIViewController {
+class UAStatisticsViewController: UITableViewController {
 
     let segmentArray = ["Сегодня", "Месяц"]
 
@@ -17,6 +17,12 @@ class UAStatisticsViewController: UIViewController {
         return segment
     }()
 
+//    internal lazy var tableView: UITableView = {
+//        let tableView = UITableView()
+//
+//        return tableView
+//    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Статистика"
@@ -25,9 +31,14 @@ class UAStatisticsViewController: UIViewController {
 
         self.view.addSubview(segmentControl)
 
+        self.tableView.register(UAMainCell.self,
+                                forCellReuseIdentifier: UAStatisticsCell.reuseIdentifier)
+
         self.segmentControl.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(140)
-            make.left.right.equalToSuperview().inset(60)
+            make.top.equalToSuperview()
+            make.left.right.equalToSuperview().inset(30)
+            make.width.equalTo(200)
+            make.height.equalTo(35)
         }
     }
 }
