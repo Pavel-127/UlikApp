@@ -75,7 +75,7 @@ class UAMainCell: UITableViewCell {
     }
     override func updateConstraints() {
         self.containerView.snp.updateConstraints { (make) in
-            make.top.equalToSuperview().inset(20)
+            make.top.equalToSuperview().offset(20)
             make.left.right.equalToSuperview().inset(5)
             make.bottom.equalToSuperview().inset(5)
             make.height.equalTo(90)

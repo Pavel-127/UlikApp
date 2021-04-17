@@ -13,37 +13,21 @@ class UAMainViewController: UITableViewController {
 
     private var categories: [UACategories] = [
         UACategories(image: UIImage(named: "produkt"),
-                     title: "Продукты",
-                     description: "0.00",
-                     amount: 0.0),
+                     title: "Продукты"),
         UACategories(image: UIImage(named: "JKH"),
-                     title: "Коммунальные платежи",
-                     description: "0.00",
-                     amount: 0.0),
+                     title: "Коммунальные платежи"),
         UACategories(image: UIImage(named: "auto"),
-                     title: "Личный авто",
-                     description: "0.00",
-                     amount: 0.0),
+                     title: "Личный авто"),
         UACategories(image: UIImage(named: "med"),
-                     title: "Здоровье",
-                     description: "0.00",
-                     amount: 0.0),
+                     title: "Здоровье"),
         UACategories(image: UIImage(named: "publik transport"),
-                     title: "Общественный транспорт",
-                     description: "0.00",
-                     amount: 0.0),
+                     title: "Общественный транспорт"),
         UACategories(image: UIImage(named: "beauty"),
-                     title: "Красота",
-                     description: "0.00",
-                     amount: 0.0),
+                     title: "Красота"),
         UACategories(image: UIImage(named: "relax"),
-                     title: "Отдых",
-                     description: "0.00",
-                     amount: 0.0),
+                     title: "Отдых"),
         UACategories(image: UIImage(named: "costs"),
-                     title: "Иные расходы",
-                     description: "0.00",
-                     amount: 0.0)
+                     title: "Иные расходы")
     ] {
         didSet {
             self.filtredCategories = self.categories
@@ -51,6 +35,13 @@ class UAMainViewController: UITableViewController {
     }
 
     private lazy var filtredCategories: [UACategories] = self.categories
+
+    private lazy var summTextField: UITextField = {
+        let summ = UITextField()
+        summ.keyboardType = .numberPad
+
+        return summ
+    }()
 
     private lazy var searchController: UISearchController = {
         let search = UISearchController()
@@ -95,7 +86,7 @@ class UAMainViewController: UITableViewController {
 
         let alertController = UIAlertController(title: "Введите сумму", message: "", preferredStyle: .alert)
         let confirmAction = UIAlertAction(title: "OK", style: .default) { (_) in
-            if let summTextField = alertController.textFields?[0] {
+            if self.summTextField == alertController.textFields?[0] {
             }
         }
 
