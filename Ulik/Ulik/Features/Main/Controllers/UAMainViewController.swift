@@ -44,13 +44,31 @@ class UAMainViewController: UITableViewController {
                      title: "Иные расходы",
                      description: "0.00",
                      amount: 0.0)
-]
+    ] {
+        didSet {
+            self.filtredCategories = self.categories
+        }
+    }
+
+    private lazy var filtredCategories: [UACategories] = self.categories
+
+    private lazy var searchController: UISearchController = {
+        let search = UISearchController()
+        search.hidesNavigationBarDuringPresentation = false
+        search.obscuresBackgroundDuringPresentation = false
+        search.searchBar.placeholder = "Поиск"
+
+        return search
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         self.navigationItem.title = "Главная"
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.searchController.searchResultsUpdater = self
+        self.navigationItem.searchController = self.searchController
+        self.navigationItem.hidesSearchBarWhenScrolling = false
 
         self.tableView.separatorStyle = .none
 
@@ -63,13 +81,13 @@ class UAMainViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.categories.count
+        return self.filtredCategories.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: UAMainCell.reuseIdentifier, for: indexPath) as? UAMainCell ?? UAMainCell()
 
-        cell.setCell(model: self.categories[indexPath.row])
+        cell.setCell(model: self.filtredCategories[indexPath.row])
         return cell
     }
 
@@ -103,5 +121,17 @@ class UAMainViewController: UITableViewController {
         default:
             break
         }
+    }
+}
+
+extension UAMainViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let searchText = searchController.searchBar.text else { return }
+        if searchText.isEmpty {
+            self.filtredCategories = self.categories
+        } else {
+            self.filtredCategories = self.categories.filter{ $0.title.lowercased().contains(searchText.lowercased()) }
+        }
+        self.tableView.reloadData()
     }
 }
