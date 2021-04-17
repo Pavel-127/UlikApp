@@ -9,15 +9,13 @@ import UIKit
 
 class UAStatisticsViewController: UIViewController {
 
-//    private lazy var backgroundImageView: UIImageView = {
-//        let imageView = UIImageView()
-//        imageView.image = UIImage(named: "background")
-//        imageView.contentMode = .scaleAspectFill
-//        imageView.translatesAutoresizingMaskIntoConstraints = false
-//        imageView.alpha = 0.5
-//
-//        return imageView
-//    }()
+    let segmentArray = ["Сегодня", "Месяц"]
+
+    private lazy var segmentControl: UISegmentedControl = {
+        let segment = UISegmentedControl(items: segmentArray)
+
+        return segment
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,10 +23,11 @@ class UAStatisticsViewController: UIViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.view.backgroundColor = .white
 
-//        self.view.addSubview(backgroundImageView)
-//
-//        self.backgroundImageView.snp.makeConstraints { (make) in
-//            make.edges.equalToSuperview()
-//        }
+        self.view.addSubview(segmentControl)
+
+        self.segmentControl.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(140)
+            make.left.right.equalToSuperview().inset(60)
+        }
     }
 }

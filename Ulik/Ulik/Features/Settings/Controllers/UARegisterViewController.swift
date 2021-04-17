@@ -13,7 +13,7 @@ class UARegisterViewController: UIViewController {
     private lazy var nameTextField: UITextField = {
         let name = UITextField()
         name.placeholder = "Введите имя пользователя"
-        name.backgroundColor = .lightGray
+        name.borderStyle = .roundedRect
         name.translatesAutoresizingMaskIntoConstraints = false
 
         return name
@@ -22,7 +22,7 @@ class UARegisterViewController: UIViewController {
     private lazy var emailTextField: UITextField = {
         let email = UITextField()
         email.placeholder = "Введите Email"
-        email.backgroundColor = .lightGray
+        email.borderStyle = .roundedRect
         email.keyboardType = .emailAddress
         email.translatesAutoresizingMaskIntoConstraints = false
 
@@ -32,7 +32,7 @@ class UARegisterViewController: UIViewController {
     private lazy var passwordTextField: UITextField = {
         let password = UITextField()
         password.placeholder = "Введите пароль"
-        password.backgroundColor = .lightGray
+        password.borderStyle = .roundedRect
         password.isSecureTextEntry = true
         password.translatesAutoresizingMaskIntoConstraints = false
 
@@ -53,10 +53,6 @@ class UARegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Регистрация"
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        let addButton = UIBarButtonItem(systemItem: .cancel)
-        self.navigationItem.setRightBarButton(addButton,
-                                              animated: false)
         self.view.backgroundColor = .white
         self.view.addSubview(nameTextField)
         self.view.addSubview(emailTextField)
@@ -105,7 +101,7 @@ class UARegisterViewController: UIViewController {
             Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
                 if error == nil {
                     if let result = result {
-                        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(UALoginViewController())
+                        self.navigationController?.pushViewController(UALoginViewController(), animated: true)
                         let ref = Database.database().reference().child("users")
                         ref.child(result.user.uid).updateChildValues(["name" : name, "email" : email])
                     }
