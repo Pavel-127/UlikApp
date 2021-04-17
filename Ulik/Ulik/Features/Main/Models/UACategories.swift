@@ -12,7 +12,7 @@ struct UACategories {
     let id = UUID()
     let image: UIImage?
     let title: String
-    var description: String
+    var description: String = "0.00"
 
-    var amount: Double?
+//    var amount: Double?
 }
