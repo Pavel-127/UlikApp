@@ -6,25 +6,37 @@
 //
 
 import UIKit
+import WebKit
 
 class UAListViewController: UIViewController {
 
-//    private lazy var backgroundImageView: UIImageView = {
-//        let imageView = UIImageView()
-//        imageView.image = UIImage(named: "background")
-//        imageView.contentMode = .scaleAspectFill
-//        imageView.translatesAutoresizingMaskIntoConstraints = false
-//        imageView.alpha = 0.5
-//
-//        return imageView
-//    }()
+    private lazy var webView: WKWebView = {
+        let view = WKWebView()
+        view.navigationDelegate = self
+
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Списки"
-        self.navigationController?.navigationBar.prefersLargeTitles = true
+//        self.title = "Списки"
+        self.navigationController?.navigationBar.isHidden = true
 
         self.view.backgroundColor = .white
+
+        self.view.addSubview(webView)
+
+        let url = URL(string: "https://myfin.by/converter")!
+           webView.load(URLRequest(url: url))
+
+             self.webView.snp.makeConstraints { (make) in
+                 make.edges.equalToSuperview()
+             }
+
+        }
     }
+
+extension UAListViewController: WKNavigationDelegate {
+
 }
