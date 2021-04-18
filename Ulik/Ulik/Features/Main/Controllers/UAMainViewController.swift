@@ -13,11 +13,13 @@ class UAMainViewController: UITableViewController {
 
     private var categories: [UACategories] = [
         UACategories(image: UIImage(named: "produkt"),
-                     title: "Продукты"),
+                     title: "Продукты",
+                     description: "25.68"),
         UACategories(image: UIImage(named: "JKH"),
                      title: "Коммунальные платежи"),
         UACategories(image: UIImage(named: "auto"),
-                     title: "Личный авто"),
+                     title: "Личный авто",
+                     description: "15.40"),
         UACategories(image: UIImage(named: "med"),
                      title: "Здоровье"),
         UACategories(image: UIImage(named: "publik transport"),
@@ -79,6 +81,7 @@ class UAMainViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: UAMainCell.reuseIdentifier, for: indexPath) as? UAMainCell ?? UAMainCell()
 
         cell.setCell(model: self.filtredCategories[indexPath.row])
+        cell.selectionStyle = .none
         return cell
     }
 
@@ -93,7 +96,8 @@ class UAMainViewController: UITableViewController {
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
 
         alertController.addTextField { (textField) in
-            textField.placeholder = "сумма"
+            textField.placeholder = "0.00"
+            textField.keyboardType = UIKeyboardType.decimalPad
         }
 
         alertController.addAction(cancelAction)
