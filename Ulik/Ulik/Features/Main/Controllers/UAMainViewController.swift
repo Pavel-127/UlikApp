@@ -14,12 +14,12 @@ class UAMainViewController: UITableViewController {
     private var categories: [UACategories] = [
         UACategories(image: UIImage(named: "produkt"),
                      title: "Продукты",
-                     description: "25.68"),
+                     description: 25.68),
         UACategories(image: UIImage(named: "JKH"),
                      title: "Коммунальные платежи"),
         UACategories(image: UIImage(named: "auto"),
                      title: "Личный авто",
-                     description: "15.40"),
+                     description: 15.40),
         UACategories(image: UIImage(named: "med"),
                      title: "Здоровье"),
         UACategories(image: UIImage(named: "publik transport"),
@@ -30,20 +30,13 @@ class UAMainViewController: UITableViewController {
                      title: "Отдых"),
         UACategories(image: UIImage(named: "costs"),
                      title: "Иные расходы")
-    ] {
+    ]{
         didSet {
             self.filtredCategories = self.categories
         }
     }
 
     private lazy var filtredCategories: [UACategories] = self.categories
-
-    private lazy var summTextField: UITextField = {
-        let summ = UITextField()
-        summ.keyboardType = .numberPad
-
-        return summ
-    }()
 
     private lazy var searchController: UISearchController = {
         let search = UISearchController()
@@ -82,6 +75,7 @@ class UAMainViewController: UITableViewController {
 
         cell.setCell(model: self.filtredCategories[indexPath.row])
         cell.selectionStyle = .none
+
         return cell
     }
 
@@ -89,12 +83,13 @@ class UAMainViewController: UITableViewController {
 
         let alertController = UIAlertController(title: "Введите сумму", message: "", preferredStyle: .alert)
         let confirmAction = UIAlertAction(title: "OK", style: .default) { (_) in
-            if self.summTextField == alertController.textFields?[0] {
+            if let summTextField = alertController.textFields?[0] {
+                self.filtredCategories[indexPath.row].description += Double(summTextField.text!)!
+                self.tableView.reloadRows(at: [indexPath], with: .fade)
             }
         }
 
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
-
         alertController.addTextField { (textField) in
             textField.placeholder = "0.00"
             textField.keyboardType = UIKeyboardType.decimalPad
@@ -102,8 +97,10 @@ class UAMainViewController: UITableViewController {
 
         alertController.addAction(cancelAction)
         alertController.addAction(confirmAction)
+        self.tableView.reloadData()
 
         present(alertController, animated: true, completion: nil)
+
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -116,6 +113,7 @@ class UAMainViewController: UITableViewController {
         default:
             break
         }
+        tableView.reloadData()
     }
 }
 

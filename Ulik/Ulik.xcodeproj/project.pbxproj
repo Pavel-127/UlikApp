@@ -12,6 +12,7 @@
 		FA0224A82625E5A100539E19 /* UARegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0224A72625E5A100539E19 /* UARegisterViewController.swift */; };
 		FA34AE792623957E0077AD39 /* UAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA34AE782623957E0077AD39 /* UAViewController.swift */; };
 		FA5C24B8262A3012006A6454 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5C24B7262A3012006A6454 /* Assets.xcassets */; };
+		FA89858E262F87D400B8BF37 /* toDouble+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89858D262F87D400B8BF37 /* toDouble+Ex.swift */; };
 		FA911A78261CA4FC0059967B /* UAMainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA911A77261CA4FC0059967B /* UAMainTabBarController.swift */; };
 		FA911A7D261CA6BC0059967B /* UAInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA911A7C261CA6BC0059967B /* UAInterface.swift */; };
 		FA98980F261A1ED100855D36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98980E261A1ED100855D36 /* AppDelegate.swift */; };
@@ -37,6 +38,7 @@
 		FA0224A72625E5A100539E19 /* UARegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UARegisterViewController.swift; sourceTree = "<group>"; };
 		FA34AE782623957E0077AD39 /* UAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAViewController.swift; sourceTree = "<group>"; };
 		FA5C24B7262A3012006A6454 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA89858D262F87D400B8BF37 /* toDouble+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "toDouble+Ex.swift"; sourceTree = "<group>"; };
 		FA911A77261CA4FC0059967B /* UAMainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAMainTabBarController.swift; sourceTree = "<group>"; };
 		FA911A7C261CA6BC0059967B /* UAInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAInterface.swift; sourceTree = "<group>"; };
 		FA98980B261A1ED100855D36 /* Ulik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ulik.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +86,14 @@
 				56983459F219B0CF5C1A9866 /* Pods_Ulik.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA89858B262F878300B8BF37 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA89858D262F87D400B8BF37 /* toDouble+Ex.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		FA911A76261CA4CB0059967B /* Common */ = {
@@ -134,6 +144,7 @@
 		FA98980D261A1ED100855D36 /* Ulik */ = {
 			isa = PBXGroup;
 			children = (
+				FA89858B262F878300B8BF37 /* Extensions */,
 				FABDC7D226273C000069B918 /* Playground */,
 				FA911A76261CA4CB0059967B /* Common */,
 				FA989845261A570800855D36 /* Rescources */,
@@ -150,7 +161,7 @@
 		FA989834261A55C400855D36 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				FA989837261A560F00855D36 /* Lists */,
+				FA989837261A560F00855D36 /* Converter */,
 				FA989838261A561B00855D36 /* Settings */,
 				FA989836261A55FA00855D36 /* Statistics */,
 				FA989835261A55E800855D36 /* Main */,
@@ -178,14 +189,14 @@
 			path = Statistics;
 			sourceTree = "<group>";
 		};
-		FA989837261A560F00855D36 /* Lists */ = {
+		FA989837261A560F00855D36 /* Converter */ = {
 			isa = PBXGroup;
 			children = (
 				FA98983E261A567A00855D36 /* Controllers */,
 				FA98983D261A566D00855D36 /* Views */,
 				FA98983C261A566300855D36 /* Models */,
 			);
-			path = Lists;
+			path = Converter;
 			sourceTree = "<group>";
 		};
 		FA989838261A561B00855D36 /* Settings */ = {
@@ -464,6 +475,7 @@
 				FA911A78261CA4FC0059967B /* UAMainTabBarController.swift in Sources */,
 				FABABF592627527A00923B46 /* UAMainCell.swift in Sources */,
 				FA989813261A1ED100855D36 /* UAInitViewController.swift in Sources */,
+				FA89858E262F87D400B8BF37 /* toDouble+Ex.swift in Sources */,
 				FA0224A52625E58C00539E19 /* UALoginViewController.swift in Sources */,
 				FA34AE792623957E0077AD39 /* UAViewController.swift in Sources */,
 				FA98980F261A1ED100855D36 /* AppDelegate.swift in Sources */,
