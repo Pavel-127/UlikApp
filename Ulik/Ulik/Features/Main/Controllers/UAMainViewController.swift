@@ -13,23 +13,23 @@ class UAMainViewController: UITableViewController {
 
     private var categories: [UACategories] = [
         UACategories(image: UIImage(named: "produkt"),
-                     title: "Продукты",
+                     title: NSLocalizedString("Categories products", comment: ""),
                      description: 25.68),
         UACategories(image: UIImage(named: "JKH"),
-                     title: "Коммунальные платежи"),
+                     title: NSLocalizedString("Categories communal payments", comment: "")),
         UACategories(image: UIImage(named: "auto"),
-                     title: "Личный авто",
+                     title: NSLocalizedString("Categories personal car", comment: ""),
                      description: 15.40),
         UACategories(image: UIImage(named: "med"),
-                     title: "Здоровье"),
+                     title: NSLocalizedString("Categories health", comment: "")),
         UACategories(image: UIImage(named: "publik transport"),
-                     title: "Общественный транспорт"),
+                     title: NSLocalizedString("Categories public transport", comment: "")),
         UACategories(image: UIImage(named: "beauty"),
-                     title: "Красота"),
+                     title: NSLocalizedString("Categories beauty", comment: "")),
         UACategories(image: UIImage(named: "relax"),
-                     title: "Отдых"),
+                     title: NSLocalizedString("Categories relax", comment: "")),
         UACategories(image: UIImage(named: "costs"),
-                     title: "Иные расходы")
+                     title: NSLocalizedString("Categories other expenses", comment: ""))
     ]{
         didSet {
             self.filtredCategories = self.categories
@@ -42,7 +42,7 @@ class UAMainViewController: UITableViewController {
         let search = UISearchController()
         search.hidesNavigationBarDuringPresentation = false
         search.obscuresBackgroundDuringPresentation = false
-        search.searchBar.placeholder = "Поиск"
+        search.searchBar.placeholder = NSLocalizedString("Placeholder search", comment: "")
 
         return search
     }()
@@ -50,7 +50,7 @@ class UAMainViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
-        self.navigationItem.title = "Главная"
+        self.navigationItem.title = NSLocalizedString("Main title", comment: "")
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.searchController.searchResultsUpdater = self
         self.navigationItem.searchController = self.searchController
@@ -81,7 +81,7 @@ class UAMainViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        let alertController = UIAlertController(title: "Введите сумму", message: "", preferredStyle: .alert)
+        let alertController = UIAlertController(title: NSLocalizedString("Alert title", comment: ""), message: "", preferredStyle: .alert)
         let confirmAction = UIAlertAction(title: "OK", style: .default) { (_) in
             if let summTextField = alertController.textFields?[0] {
                 self.filtredCategories[indexPath.row].description += Double(summTextField.text!)!

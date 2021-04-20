@@ -12,7 +12,7 @@ class UARegisterViewController: UIViewController {
 
     private lazy var nameTextField: UITextField = {
         let name = UITextField()
-        name.placeholder = "Введите имя пользователя"
+        name.placeholder = NSLocalizedString("Placeholder username", comment: "")
         name.borderStyle = .roundedRect
         name.translatesAutoresizingMaskIntoConstraints = false
 
@@ -21,7 +21,7 @@ class UARegisterViewController: UIViewController {
 
     private lazy var emailTextField: UITextField = {
         let email = UITextField()
-        email.placeholder = "Введите Email"
+        email.placeholder = NSLocalizedString("Placeholder email", comment: "")
         email.borderStyle = .roundedRect
         email.keyboardType = .emailAddress
         email.translatesAutoresizingMaskIntoConstraints = false
@@ -31,7 +31,7 @@ class UARegisterViewController: UIViewController {
 
     private lazy var passwordTextField: UITextField = {
         let password = UITextField()
-        password.placeholder = "Введите пароль"
+        password.placeholder = NSLocalizedString("Placeholder password", comment: "")
         password.borderStyle = .roundedRect
         password.isSecureTextEntry = true
         password.translatesAutoresizingMaskIntoConstraints = false
@@ -41,7 +41,7 @@ class UARegisterViewController: UIViewController {
 
     private lazy var registerButton: UIButton = {
         let register = UIButton()
-        register.setTitle("Регистрация", for: UIControl.State())
+        register.setTitle(NSLocalizedString("Register title", comment: ""), for: UIControl.State())
         register.setTitleColor(.blue, for: UIControl.State())
         register.titleLabel?.font = UIFont.systemFont(ofSize: 20)
         register.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
@@ -52,7 +52,7 @@ class UARegisterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Регистрация"
+        self.title = NSLocalizedString("Register title", comment: "")
         self.view.backgroundColor = .white
         self.view.addSubview(nameTextField)
         self.view.addSubview(emailTextField)
@@ -113,7 +113,7 @@ class UARegisterViewController: UIViewController {
     }
 
     private func showErrorAlert() {
-        let alert = UIAlertController(title: "Ошибка", message: "Заполните все поля", preferredStyle: .alert)
+        let alert = UIAlertController(title: NSLocalizedString("Error title", comment: ""), message: NSLocalizedString("Message title", comment: ""), preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
