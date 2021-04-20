@@ -12,7 +12,7 @@ class UASettingsViewController: UIViewController {
 
     private lazy var loginButton: UIButton = {
         let login = UIButton()
-        login.setTitle("Войти", for: UIControl.State())
+        login.setTitle(NSLocalizedString("Login title", comment: ""), for: UIControl.State())
         login.setTitleColor(.blue, for: UIControl.State())
         login.titleLabel?.font = UIFont.systemFont(ofSize: 20)
         login.translatesAutoresizingMaskIntoConstraints = false
@@ -23,7 +23,7 @@ class UASettingsViewController: UIViewController {
 
     private lazy var registerButton: UIButton = {
         let register = UIButton()
-        register.setTitle("Регистрация", for: UIControl.State())
+        register.setTitle(NSLocalizedString("Register title", comment: ""), for: UIControl.State())
         register.setTitleColor(.blue, for: UIControl.State())
         register.titleLabel?.font = UIFont.systemFont(ofSize: 20)
         register.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
@@ -35,7 +35,7 @@ class UASettingsViewController: UIViewController {
     private lazy var currencyTextField: UITextField = {
         let currency = UITextField()
         currency.translatesAutoresizingMaskIntoConstraints = false
-        currency.placeholder = "Выберите валюту"
+        currency.placeholder = NSLocalizedString("Placeholder currency", comment: "")
         currency.borderStyle = .roundedRect
         currency.inputView = self.picker
         currency.inputAccessoryView = self.doneToolBar
@@ -70,7 +70,7 @@ class UASettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Настройки"
+        self.title = NSLocalizedString("Fourth title", comment: "")
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.view.backgroundColor = .white
         self.view.addSubview(loginButton)

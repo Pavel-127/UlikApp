@@ -12,7 +12,7 @@ class UALoginViewController: UIViewController, UITextFieldDelegate {
 
     private lazy var emailTextField: UITextField = {
         let email = UITextField()
-        email.placeholder = "Введите Email"
+        email.placeholder = NSLocalizedString("Placeholder email", comment: "")
         email.borderStyle = .roundedRect
         email.translatesAutoresizingMaskIntoConstraints = false
 
@@ -21,7 +21,7 @@ class UALoginViewController: UIViewController, UITextFieldDelegate {
 
     private lazy var passwordTextField: UITextField = {
         let password = UITextField()
-        password.placeholder = "Введите пароль"
+        password.placeholder = NSLocalizedString("Placeholder password", comment: "")
         password.borderStyle = .roundedRect
         password.isSecureTextEntry = true
         password.translatesAutoresizingMaskIntoConstraints = false
@@ -31,7 +31,7 @@ class UALoginViewController: UIViewController, UITextFieldDelegate {
 
     private lazy var loginButton: UIButton = {
         let login = UIButton()
-        login.setTitle("Войти", for: UIControl.State())
+        login.setTitle(NSLocalizedString("Login title", comment: ""), for: UIControl.State())
         login.setTitleColor(.blue, for: UIControl.State())
         login.titleLabel?.font = UIFont.systemFont(ofSize: 20)
         login.translatesAutoresizingMaskIntoConstraints = false
@@ -42,7 +42,7 @@ class UALoginViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Вход"
+        self.title = NSLocalizedString("Login title", comment: "")
         self.view.backgroundColor = .white
         self.view.addSubview(emailTextField)
         self.view.addSubview(passwordTextField)
@@ -92,13 +92,13 @@ class UALoginViewController: UIViewController, UITextFieldDelegate {
     }
 
     private func showErrorAlert() {
-        let alert = UIAlertController(title: "Ошибка", message: "Заполните все поля", preferredStyle: .alert)
+        let alert = UIAlertController(title: NSLocalizedString("Error title", comment: ""), message: NSLocalizedString("Message title", comment: ""), preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
 
     private func showErrorLoginAndEmailAlert() {
-        let alert = UIAlertController(title: "Ошибка", message: "Неверные данные пользователя", preferredStyle: .alert)
+        let alert = UIAlertController(title: NSLocalizedString("Error title", comment: ""), message: NSLocalizedString("Message error", comment: ""), preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }

@@ -1,0 +1,35 @@
+/* 
+  Localizable.strings
+  Ulik
+
+  Created by macbook on 4/21/21.
+  
+*/
+
+"Main title" = "Главная";
+"Second title" = "Статистика";
+"Third title" = "Конвертер";
+"Fourth title" = "Настройки";
+"Categories products" = "Продукты";
+"Categories communal payments" = "Коммунальные платежи";
+"Categories personal car" = "Личный авто";
+"Categories health" = "Здоровье";
+"Categories public transport" = "Общественный транспорт";
+"Categories beauty" = "Красота";
+"Categories relax" = "Отдых";
+"Categories other expenses" = "Иные расходы";
+"Placeholder search" = "Поиск";
+"Alert title" = "Введите сумму";
+"Login title" = "Вход";
+"Register title" = "Регистрация";
+"Placeholder currency" = "Выберите валюту";
+"Placeholder email" = "Введите Email";
+"Placeholder password" = "Введите пароль";
+"Error title" = "Ошибка";
+"Message title" = "Заполните все поля";
+"Message error" = "Неверные данные пользователя";
+"Placeholder username" = "Введите имя пользователя";
+"Currency USD" = "U.S. dollar";
+"Currency EUR" = "EURO";
+"Currency BYN" = "Belarusian ruble";
+"Currency RUB" = "Russian ruble";
