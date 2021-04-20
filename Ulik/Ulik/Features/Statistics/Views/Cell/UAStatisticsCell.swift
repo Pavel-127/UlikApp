@@ -15,12 +15,6 @@ class UAStatisticsCell: UITableViewCell {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .white
-//        view.layer.cornerRadius = 15
-//        view.layer.shadowColor = UIColor.black.cgColor
-//        view.layer.shadowOpacity = 0.5
-//        view.layer.shadowRadius = 10
-//        view.clipsToBounds = false
-//        view.layer.shadowOffset = CGSize(width: 0, height: 0)
         view.layer.shouldRasterize = true
         view.layer.rasterizationScale = UIScreen.main.scale
 
@@ -103,7 +97,7 @@ class UAStatisticsCell: UITableViewCell {
 
     func setCell(model: UACategories) {
         self.imageName.text = model.title
-        self.summLabel.text = model.description
+        self.summLabel.text?.toDouble() = model.description
         self.mainImageView.image = model.image
 
         self.setNeedsUpdateConstraints()

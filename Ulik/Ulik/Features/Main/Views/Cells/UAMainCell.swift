@@ -103,7 +103,7 @@ class UAMainCell: UITableViewCell {
 
     func setCell(model: UACategories) {
         self.imageName.text = model.title
-        self.summLabel.text = model.description
+        self.summLabel.text?.toDouble = model.description
         self.mainImageView.image = model.image
 
         self.setNeedsUpdateConstraints()

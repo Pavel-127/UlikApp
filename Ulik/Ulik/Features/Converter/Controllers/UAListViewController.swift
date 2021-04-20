@@ -20,7 +20,6 @@ class UAListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        self.title = "Списки"
         self.navigationController?.navigationBar.isHidden = true
 
         self.view.backgroundColor = .white
@@ -33,7 +32,6 @@ class UAListViewController: UIViewController {
              self.webView.snp.makeConstraints { (make) in
                  make.edges.equalToSuperview()
              }
-
         }
     }
 
