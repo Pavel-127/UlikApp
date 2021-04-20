@@ -1,0 +1,38 @@
+/* 
+  Localizable.strings
+  Ulik
+
+  Created by macbook on 4/21/21.
+  
+*/
+
+"Main title" = "Main";
+"Second title" = "Statistics";
+"Third title" = "Converter";
+"Fourth title" = "Settings";
+"Categories products" = "Products";
+"Categories communal payments" = "Communal payments";
+"Categories personal car" = "Personal car";
+"Categories health" = "Health";
+"Categories public transport" = "Public transport";
+"Categories beauty" = "Beauty";
+"Categories relax" = "Relax";
+"Categories other expenses" = "other expenses";
+"Placeholder search" = "Search";
+"Alert title" = "Enter the amount";
+"Login title" = "Login";
+"Register title" = "Register";
+"Placeholder currency" = "Select currency";
+"Placeholder email" = "Enter Email";
+"Placeholder password" = "Enter password";
+"Error title" = "Error";
+"Message title" = "Fill in all fields";
+"Message error" = "Invalid user data";
+"Placeholder username" = "Enter username";
+"Currency USD" = "U.S. dollar";
+"Currency EUR" = "EURO";
+"Currency BYN" = "Belarusian ruble";
+"Currency RUB" = "Russian ruble";
+
+
+
