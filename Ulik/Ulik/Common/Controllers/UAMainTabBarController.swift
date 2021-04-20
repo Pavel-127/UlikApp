@@ -26,7 +26,7 @@ class UAMainTabBarController: UITabBarController {
     }()
 
     private lazy var listTabBarItem: UITabBarItem = {
-        let view = UITabBarItem(title: "Конвертор",
+        let view = UITabBarItem(title: "Конвертер",
                                 image: UIImage(systemName: "dollarsign.circle"),
                                 selectedImage: UIImage(systemName: "dollarsign.circle.fill"))
 
