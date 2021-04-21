@@ -10,7 +10,7 @@
 		36CC314E31A561F18871B526 /* Pods_Ulik.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56983459F219B0CF5C1A9866 /* Pods_Ulik.framework */; };
 		FA0224A52625E58C00539E19 /* UALoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0224A42625E58C00539E19 /* UALoginViewController.swift */; };
 		FA0224A82625E5A100539E19 /* UARegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0224A72625E5A100539E19 /* UARegisterViewController.swift */; };
-		FA34AE792623957E0077AD39 /* UAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA34AE782623957E0077AD39 /* UAViewController.swift */; };
+		FA2A694F263077B900AC4BD4 /* UAAllCatigories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2A694E263077B900AC4BD4 /* UAAllCatigories.swift */; };
 		FA5C24B8262A3012006A6454 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5C24B7262A3012006A6454 /* Assets.xcassets */; };
 		FA89858E262F87D400B8BF37 /* toDouble+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89858D262F87D400B8BF37 /* toDouble+Ex.swift */; };
 		FA898598262F933400B8BF37 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA89859A262F933400B8BF37 /* Localizable.strings */; };
@@ -19,7 +19,6 @@
 		FA911A7D261CA6BC0059967B /* UAInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA911A7C261CA6BC0059967B /* UAInterface.swift */; };
 		FA98980F261A1ED100855D36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98980E261A1ED100855D36 /* AppDelegate.swift */; };
 		FA989811261A1ED100855D36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA989810261A1ED100855D36 /* SceneDelegate.swift */; };
-		FA989813261A1ED100855D36 /* UAInitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA989812261A1ED100855D36 /* UAInitViewController.swift */; };
 		FA98981B261A1ED300855D36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA989819261A1ED300855D36 /* LaunchScreen.storyboard */; };
 		FA989829261A4D8A00855D36 /* UAMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA989828261A4D8A00855D36 /* UAMainViewController.swift */; };
 		FA98982C261A4DBD00855D36 /* UAStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98982B261A4DBD00855D36 /* UAStatisticsViewController.swift */; };
@@ -38,7 +37,7 @@
 		A50C4C55D6D07CBD7B2C1476 /* Pods-Ulik.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ulik.debug.xcconfig"; path = "Target Support Files/Pods-Ulik/Pods-Ulik.debug.xcconfig"; sourceTree = "<group>"; };
 		FA0224A42625E58C00539E19 /* UALoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UALoginViewController.swift; sourceTree = "<group>"; };
 		FA0224A72625E5A100539E19 /* UARegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UARegisterViewController.swift; sourceTree = "<group>"; };
-		FA34AE782623957E0077AD39 /* UAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAViewController.swift; sourceTree = "<group>"; };
+		FA2A694E263077B900AC4BD4 /* UAAllCatigories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAAllCatigories.swift; sourceTree = "<group>"; };
 		FA5C24B7262A3012006A6454 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA89858D262F87D400B8BF37 /* toDouble+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "toDouble+Ex.swift"; sourceTree = "<group>"; };
 		FA898596262F930D00B8BF37 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -50,7 +49,6 @@
 		FA98980B261A1ED100855D36 /* Ulik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ulik.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA98980E261A1ED100855D36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA989810261A1ED100855D36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FA989812261A1ED100855D36 /* UAInitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAInitViewController.swift; sourceTree = "<group>"; };
 		FA98981A261A1ED300855D36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA98981C261A1ED300855D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA989828261A4D8A00855D36 /* UAMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAMainViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +122,7 @@
 				FA8985A0262FA8A800B8BF37 /* DataSaving */,
 				FA911A7B261CA6980059967B /* Controllers */,
 				FA911A7A261CA6650059967B /* Navigation */,
+				FA2A694E263077B900AC4BD4 /* UAAllCatigories.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -139,8 +138,6 @@
 		FA911A7B261CA6980059967B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FA989812261A1ED100855D36 /* UAInitViewController.swift */,
-				FA34AE782623957E0077AD39 /* UAViewController.swift */,
 				FA911A77261CA4FC0059967B /* UAMainTabBarController.swift */,
 			);
 			path = Controllers;
@@ -501,16 +498,15 @@
 				FABABF5E2627770E00923B46 /* UACurrency.swift in Sources */,
 				FA911A78261CA4FC0059967B /* UAMainTabBarController.swift in Sources */,
 				FABABF592627527A00923B46 /* UAMainCell.swift in Sources */,
-				FA989813261A1ED100855D36 /* UAInitViewController.swift in Sources */,
 				FA89858E262F87D400B8BF37 /* toDouble+Ex.swift in Sources */,
 				FA0224A52625E58C00539E19 /* UALoginViewController.swift in Sources */,
-				FA34AE792623957E0077AD39 /* UAViewController.swift in Sources */,
 				FA98980F261A1ED100855D36 /* AppDelegate.swift in Sources */,
 				FACC4D7F262872A900D7C5C5 /* UACategories.swift in Sources */,
 				FA0224A82625E5A100539E19 /* UARegisterViewController.swift in Sources */,
 				FA989811261A1ED100855D36 /* SceneDelegate.swift in Sources */,
 				FA989832261A4E0200855D36 /* UASettingsViewController.swift in Sources */,
 				FA989829261A4D8A00855D36 /* UAMainViewController.swift in Sources */,
+				FA2A694F263077B900AC4BD4 /* UAAllCatigories.swift in Sources */,
 				FA911A7D261CA6BC0059967B /* UAInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
