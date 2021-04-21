@@ -25,6 +25,14 @@ class UAUserDefaults {
 
     private init() {}
 
+//    func saveCurrency() {
+//        UserDefaults.standard.setValue(currency, forKey: "UACurrency")
+//    }
+//    func loadCurrency() -> String {
+//        let value = UserDefaults.standard.value(forKey: "UACurrency") as? String
+//        return value ?? "BYN"
+//    }
+
     func saveCurrency(_ currency: UACurrency) {
         let encoder = JSONEncoder()
         if let data = try? encoder.encode(currency) {
