@@ -77,6 +77,7 @@ class UASettingsViewController: UIViewController {
         self.view.addSubview(registerButton)
         self.view.addSubview(currencyTextField)
         self.updateViewConstraints()
+        UAUserDefaults.sh.loadCurrency()
     }
 
     override func updateViewConstraints() {
@@ -108,6 +109,7 @@ class UASettingsViewController: UIViewController {
 
     @objc private func doneTapped() {
         self.currencyTextField.resignFirstResponder()
+
     }
 }
 
@@ -125,6 +127,8 @@ extension UASettingsViewController: UIPickerViewDelegate, UIPickerViewDataSource
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        UAUserDefaults.sh.saveCurrency(UACurrency.BYN)
         return self.currencyTextField.text = UACurrency.stringCurrency[row]
+
     }
 }

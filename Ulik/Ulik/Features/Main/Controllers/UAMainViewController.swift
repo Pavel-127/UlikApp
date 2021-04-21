@@ -14,12 +14,12 @@ class UAMainViewController: UITableViewController {
     private var categories: [UACategories] = [
         UACategories(image: UIImage(named: "produkt"),
                      title: NSLocalizedString("Categories products", comment: ""),
-                     description: 25.68),
+                     description: "25.68"),
         UACategories(image: UIImage(named: "JKH"),
                      title: NSLocalizedString("Categories communal payments", comment: "")),
         UACategories(image: UIImage(named: "auto"),
                      title: NSLocalizedString("Categories personal car", comment: ""),
-                     description: 15.40),
+                     description: "15.40"),
         UACategories(image: UIImage(named: "med"),
                      title: NSLocalizedString("Categories health", comment: "")),
         UACategories(image: UIImage(named: "publik transport"),
@@ -30,7 +30,7 @@ class UAMainViewController: UITableViewController {
                      title: NSLocalizedString("Categories relax", comment: "")),
         UACategories(image: UIImage(named: "costs"),
                      title: NSLocalizedString("Categories other expenses", comment: ""))
-    ]{
+    ] {
         didSet {
             self.filtredCategories = self.categories
         }
@@ -84,7 +84,7 @@ class UAMainViewController: UITableViewController {
         let alertController = UIAlertController(title: NSLocalizedString("Alert title", comment: ""), message: "", preferredStyle: .alert)
         let confirmAction = UIAlertAction(title: "OK", style: .default) { (_) in
             if let summTextField = alertController.textFields?[0] {
-                self.filtredCategories[indexPath.row].description += Double(summTextField.text!)!
+                self.filtredCategories[indexPath.row].description += summTextField.text!
                 self.tableView.reloadRows(at: [indexPath], with: .fade)
             }
         }
