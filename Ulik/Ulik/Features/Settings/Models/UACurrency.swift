@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum UACurrency: String, CaseIterable {
+enum UACurrency: String, CaseIterable, Codable {
     case USD = "Доллар США"
     case EUR = "Евро"
     case BYN = "Белорусский рубль"
