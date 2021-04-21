@@ -14,6 +14,7 @@
 		FA5C24B8262A3012006A6454 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5C24B7262A3012006A6454 /* Assets.xcassets */; };
 		FA89858E262F87D400B8BF37 /* toDouble+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89858D262F87D400B8BF37 /* toDouble+Ex.swift */; };
 		FA898598262F933400B8BF37 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA89859A262F933400B8BF37 /* Localizable.strings */; };
+		FA89859E262FA35900B8BF37 /* UAUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89859D262FA35900B8BF37 /* UAUserDefaults.swift */; };
 		FA911A78261CA4FC0059967B /* UAMainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA911A77261CA4FC0059967B /* UAMainTabBarController.swift */; };
 		FA911A7D261CA6BC0059967B /* UAInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA911A7C261CA6BC0059967B /* UAInterface.swift */; };
 		FA98980F261A1ED100855D36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98980E261A1ED100855D36 /* AppDelegate.swift */; };
@@ -43,6 +44,7 @@
 		FA898596262F930D00B8BF37 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		FA898599262F933400B8BF37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FA89859B262F933900B8BF37 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA89859D262FA35900B8BF37 /* UAUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAUserDefaults.swift; sourceTree = "<group>"; };
 		FA911A77261CA4FC0059967B /* UAMainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAMainTabBarController.swift; sourceTree = "<group>"; };
 		FA911A7C261CA6BC0059967B /* UAInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAInterface.swift; sourceTree = "<group>"; };
 		FA98980B261A1ED100855D36 /* Ulik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ulik.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,9 +110,18 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+		FA8985A0262FA8A800B8BF37 /* DataSaving */ = {
+			isa = PBXGroup;
+			children = (
+				FA89859D262FA35900B8BF37 /* UAUserDefaults.swift */,
+			);
+			path = DataSaving;
+			sourceTree = "<group>";
+		};
 		FA911A76261CA4CB0059967B /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				FA8985A0262FA8A800B8BF37 /* DataSaving */,
 				FA911A7B261CA6980059967B /* Controllers */,
 				FA911A7A261CA6650059967B /* Navigation */,
 			);
@@ -485,6 +496,7 @@
 			files = (
 				FA98982F261A4DE900855D36 /* UAListViewController.swift in Sources */,
 				FA98982C261A4DBD00855D36 /* UAStatisticsViewController.swift in Sources */,
+				FA89859E262FA35900B8BF37 /* UAUserDefaults.swift in Sources */,
 				FAC706B7262B5C2A00BBA2B9 /* UAStatisticsCell.swift in Sources */,
 				FABABF5E2627770E00923B46 /* UACurrency.swift in Sources */,
 				FA911A78261CA4FC0059967B /* UAMainTabBarController.swift in Sources */,

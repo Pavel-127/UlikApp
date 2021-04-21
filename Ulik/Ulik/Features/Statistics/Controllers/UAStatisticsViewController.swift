@@ -11,16 +11,16 @@ class UAStatisticsViewController: UITableViewController {
 
     let segmentArray = ["Сегодня", "Месяц"]
 
-//    private lazy var categories: [UACategories]
+//    private lazy var statisticCategories: [UACategories]
 
     private var categories: [UACategories] = [UACategories(image: UIImage(named: "produkt"),
                                                            title: "Продукты",
-                                                           description: 25.68),
+                                                           description: "25.68"),
                                               UACategories(image: UIImage(named: "JKH"),
                                                            title: "Коммунальные платежи"),
                                               UACategories(image: UIImage(named: "auto"),
                                                            title: "Личный авто",
-                                                           description: 15.40),
+                                                           description: "15.40"),
                                               UACategories(image: UIImage(named: "med"),
                                                            title: "Здоровье"),
                                               UACategories(image: UIImage(named: "publik transport"),
@@ -58,7 +58,7 @@ class UAStatisticsViewController: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
 
-        self.categories = self.categories.filter { $0.description != 0.00 }
+        self.categories = self.categories.filter { $0.description != "0.00" }
 
 //        self.segmentControl.snp.makeConstraints { (make) in
 //            make.top.equalTo(self.tableView.snp.top).offset(10)
