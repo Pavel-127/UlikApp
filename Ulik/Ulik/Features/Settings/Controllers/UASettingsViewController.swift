@@ -10,6 +10,8 @@ import SnapKit
 
 class UASettingsViewController: UIViewController {
 
+    //MARK: - gui variables
+
     private lazy var loginButton: UIButton = {
         let login = UIButton()
         login.setTitle(("Login title".localized), for: UIControl.State())
@@ -68,6 +70,8 @@ class UASettingsViewController: UIViewController {
         return toolbar
     }()
 
+    //MARK: - view life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Fourth title".localized
@@ -80,6 +84,8 @@ class UASettingsViewController: UIViewController {
         UAUserDefaults.sh.loadCurrency()
     }
 
+    //MARK: - constraints
+
     override func updateViewConstraints() {
         self.loginButton.snp.updateConstraints { (make) in
             make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(40)
@@ -90,6 +96,7 @@ class UASettingsViewController: UIViewController {
             make.top.equalTo(self.loginButton.snp.bottom).offset(20)
             make.left.right.equalToSuperview().inset(5)
         }
+        
         self.currencyTextField.snp.updateConstraints { (make) in
             make.top.equalTo(self.registerButton.snp.bottom).offset(40)
             make.left.equalToSuperview().inset(20)
@@ -99,6 +106,8 @@ class UASettingsViewController: UIViewController {
 
         super.updateViewConstraints()
     }
+
+    //MARK: - @objc func
 
     @objc private func loginButtonTapped() {
         navigationController?.pushViewController(UALoginViewController(), animated: true)
@@ -113,6 +122,8 @@ class UASettingsViewController: UIViewController {
         UAUserDefaults.sh.saveCurrency(UACurrency.BYN)
     }
 }
+
+//MARK: - extensions
 
 extension UASettingsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

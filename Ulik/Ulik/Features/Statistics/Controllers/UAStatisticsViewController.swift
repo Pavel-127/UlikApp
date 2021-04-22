@@ -9,17 +9,11 @@ import UIKit
 
 class UAStatisticsViewController: UIViewController {
 
-//    let segmentArray = ["Сегодня", "Месяц"]
+    //MARK: - models
 
-   lazy var statisticCategories: [UACategories] = UAAllCatigories.sh.allCategorise
+    lazy var statisticCategories: [UACategories] = UAAllCatigories.sh.allCategorise
 
     //MARK: - gui varibles
-
-//    private lazy var segmentControl: UISegmentedControl = {
-//        let segment = UISegmentedControl(items: segmentArray)
-//
-//        return segment
-//    }()
 
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -43,33 +37,12 @@ class UAStatisticsViewController: UIViewController {
         self.tableView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
-//        self.view.addSubview(self.segmentControl)
-//        tableView.register(UAStatisticsCell.self,
-//                                forCellReuseIdentifier: UAStatisticsCell.reuseIdentifier)
 
         UAAllCatigories.sh.allCategorise = UAAllCatigories.sh.allCategorise.filter { $0.description != "0.00" }
-
-//        self.segmentControl.snp.makeConstraints { (make) in
-//            make.top.equalToSuperview().offset(80)
-//            make.left.right.equalToSuperview().inset(100)
-//            make.width.equalTo(200)
-//            make.height.equalTo(35)
-//        }
     }
-
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return self.categories.count
-//    }
-//
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: UAStatisticsCell.reuseIdentifier, for: indexPath) as? UAStatisticsCell ?? UAStatisticsCell()
-//
-//        cell.setCell(model: self.categories[indexPath.row])
-//        cell.selectionStyle = .none
-//
-//        return cell
-//    }
 }
+
+//MARK: - extensions
 
 extension UAStatisticsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

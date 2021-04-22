@@ -10,6 +10,8 @@ import Firebase
 
 class UALoginViewController: UIViewController, UITextFieldDelegate {
 
+    //MARK: - gui variables
+
     private lazy var emailTextField: UITextField = {
         let email = UITextField()
         email.placeholder = "Placeholder email".localized
@@ -42,6 +44,8 @@ class UALoginViewController: UIViewController, UITextFieldDelegate {
         return login
     }()
 
+    //MARK: - view life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Login title".localized
@@ -51,6 +55,8 @@ class UALoginViewController: UIViewController, UITextFieldDelegate {
         self.view.addSubview(loginButton)
         self.updateViewConstraints()
     }
+
+    //MARK: - constraints
 
     override func updateViewConstraints() {
 
@@ -75,6 +81,8 @@ class UALoginViewController: UIViewController, UITextFieldDelegate {
         super.updateViewConstraints()
     }
 
+    //MARK: - @objc func
+
     @objc private func loginButtonTapped() {
         let email = emailTextField.text ?? ""
         let password = passwordTextField.text ?? ""
@@ -90,6 +98,8 @@ class UALoginViewController: UIViewController, UITextFieldDelegate {
             self.showErrorAlert()
         }
     }
+
+    //MARK: - error processing
 
     private func showErrorAlert() {
         let alert = UIAlertController(title: ("Error title".localized),

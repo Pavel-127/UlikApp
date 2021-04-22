@@ -11,6 +11,8 @@ class UAStatisticsCell: UITableViewCell {
 
     static let reuseIdentifier: String = "UAStatisticsCell"
 
+    //MARK: - gui variables
+
     private lazy var containerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -44,6 +46,8 @@ class UAStatisticsCell: UITableViewCell {
         return summ
     }()
 
+    //MARK: - view life cycle
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
@@ -62,6 +66,8 @@ class UAStatisticsCell: UITableViewCell {
 
     }
 
+    //MARK: - constraints
+    
     override func updateConstraints() {
         self.containerView.snp.updateConstraints { (make) in
             make.top.equalToSuperview().inset(10)
