@@ -12,36 +12,39 @@ class UARegisterViewController: UIViewController {
 
     private lazy var nameTextField: UITextField = {
         let name = UITextField()
-        name.placeholder = NSLocalizedString("Placeholder username", comment: "")
+        name.placeholder = "Placeholder username".localized
         name.borderStyle = .roundedRect
         name.translatesAutoresizingMaskIntoConstraints = false
+        name.delegate = self
 
         return name
     }()
 
     private lazy var emailTextField: UITextField = {
         let email = UITextField()
-        email.placeholder = NSLocalizedString("Placeholder email", comment: "")
+        email.placeholder = "Placeholder email".localized
         email.borderStyle = .roundedRect
         email.keyboardType = .emailAddress
         email.translatesAutoresizingMaskIntoConstraints = false
+        email.delegate = self
 
         return email
     }()
 
     private lazy var passwordTextField: UITextField = {
         let password = UITextField()
-        password.placeholder = NSLocalizedString("Placeholder password", comment: "")
+        password.placeholder = "Placeholder password".localized
         password.borderStyle = .roundedRect
         password.isSecureTextEntry = true
         password.translatesAutoresizingMaskIntoConstraints = false
+        password.delegate = self
 
         return password
     }()
 
     private lazy var registerButton: UIButton = {
         let register = UIButton()
-        register.setTitle(NSLocalizedString("Register title", comment: ""), for: UIControl.State())
+        register.setTitle(("Register title".localized), for: UIControl.State())
         register.setTitleColor(.blue, for: UIControl.State())
         register.titleLabel?.font = UIFont.systemFont(ofSize: 20)
         register.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
@@ -52,15 +55,12 @@ class UARegisterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = NSLocalizedString("Register title", comment: "")
+        self.title = "Register title".localized
         self.view.backgroundColor = .white
         self.view.addSubview(nameTextField)
         self.view.addSubview(emailTextField)
         self.view.addSubview(passwordTextField)
         self.view.addSubview(registerButton)
-        nameTextField.delegate = self
-        emailTextField.delegate = self
-        passwordTextField.delegate = self
 
         self.updateViewConstraints()
     }
@@ -88,16 +88,17 @@ class UARegisterViewController: UIViewController {
         self.registerButton.snp.updateConstraints { (make) in
             make.top.equalTo(self.passwordTextField.snp.bottom).offset(40)
             make.left.right.equalToSuperview().inset(5)
+            make.bottom.equalToSuperview().inset(250)
         }
 
         super.updateViewConstraints()
     }
 
     @objc private func registerButtonTapped() {
-        let name = nameTextField.text!
-        let email = emailTextField.text!
+        let name = nameTextField.text ?? ""
+        let email = emailTextField.text ?? ""
         let password = passwordTextField.text!
-        if (!name.isEmpty && !email.isEmpty && !password.isEmpty) {
+        if !name.isEmpty && !email.isEmpty && !password.isEmpty {
             Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
                 if error == nil {
                     if let result = result {
@@ -113,8 +114,12 @@ class UARegisterViewController: UIViewController {
     }
 
     private func showErrorAlert() {
-        let alert = UIAlertController(title: NSLocalizedString("Error title", comment: ""), message: NSLocalizedString("Message title", comment: ""), preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        let alert = UIAlertController(title: "Error title".localized,
+                                      message: "Message title".localized,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK",
+                                      style: .default,
+                                      handler: nil))
         present(alert, animated: true, completion: nil)
     }
 }
