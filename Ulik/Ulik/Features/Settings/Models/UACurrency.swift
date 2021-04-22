@@ -12,7 +12,7 @@ enum UACurrency: String, CaseIterable, Codable {
     case EUR = "Евро"
     case BYN = "Белорусский рубль"
     case RUB = "Российский рубль"
-
+    
     static var stringCurrency: [String] {
         UACurrency.allCases.map { (currency) -> String in
             return currency.rawValue

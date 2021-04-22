@@ -21,6 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         window.makeKeyAndVisible()
     }
+    
     func changeRootViewController(_ vc: UIViewController, animated: Bool = true) {
         guard let window = self.window else { return }
 
@@ -33,5 +34,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                               animations: nil)
         }
     }
-
 }

@@ -9,6 +9,8 @@ import UIKit
 
 class UAMainTabBarController: UITabBarController {
 
+    //MARK: - gui variables
+    
     private lazy var mainTabBarItem: UITabBarItem = {
         let view = UITabBarItem(title: "Main title".localized,
                                 image: UIImage(systemName: "cart"),
@@ -40,6 +42,8 @@ class UAMainTabBarController: UITabBarController {
 
         return view
     }()
+
+    //MARK: - view life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()

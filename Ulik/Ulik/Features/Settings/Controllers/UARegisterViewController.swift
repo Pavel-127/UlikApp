@@ -10,6 +10,8 @@ import Firebase
 
 class UARegisterViewController: UIViewController {
 
+    //MARK: - gui variables
+
     private lazy var nameTextField: UITextField = {
         let name = UITextField()
         name.placeholder = "Placeholder username".localized
@@ -27,7 +29,7 @@ class UARegisterViewController: UIViewController {
         email.keyboardType = .emailAddress
         email.translatesAutoresizingMaskIntoConstraints = false
         email.delegate = self
-
+        
         return email
     }()
 
@@ -53,6 +55,8 @@ class UARegisterViewController: UIViewController {
         return register
     }()
 
+    //MARK: - view life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Register title".localized
@@ -64,6 +68,8 @@ class UARegisterViewController: UIViewController {
 
         self.updateViewConstraints()
     }
+
+    //MARK: - constraints
 
     override func updateViewConstraints() {
 
@@ -94,6 +100,8 @@ class UARegisterViewController: UIViewController {
         super.updateViewConstraints()
     }
 
+    //MARK: - @objc func
+
     @objc private func registerButtonTapped() {
         let name = nameTextField.text ?? ""
         let email = emailTextField.text ?? ""
@@ -113,6 +121,8 @@ class UARegisterViewController: UIViewController {
         }
     }
 
+    //MARK: - error processing
+
     private func showErrorAlert() {
         let alert = UIAlertController(title: "Error title".localized,
                                       message: "Message title".localized,
@@ -123,6 +133,8 @@ class UARegisterViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
 }
+
+//MARK: - extensions
 
 extension UARegisterViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

@@ -11,11 +11,15 @@ class UAMainViewController: UITableViewController {
 
     private let addButton = UIBarButtonItem(systemItem: .add)
 
+    //MARK: - model
+
     private var categories: [UACategories] = UAAllCatigories.sh.allCategorise {
         didSet {
             self.filtredCategories = self.categories
         }
     }
+
+    //MARK: - gui variables
 
     private lazy var filtredCategories: [UACategories] = self.categories
 
@@ -27,6 +31,8 @@ class UAMainViewController: UITableViewController {
 
         return search
     }()
+
+    //MARK: - view life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +53,8 @@ class UAMainViewController: UITableViewController {
 
     }
 
+    //MARK: - func TableView
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.filtredCategories.count
     }
@@ -62,7 +70,9 @@ class UAMainViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        let alertController = UIAlertController(title: ("Alert title".localized), message: "", preferredStyle: .alert)
+        let alertController = UIAlertController(title: ("Alert title".localized),
+                                                message: "",
+                                                preferredStyle: .alert)
         let confirmAction = UIAlertAction(title: "OK", style: .default) { (_) in
             if let summTextField = alertController.textFields?[0] {
                 self.filtredCategories[indexPath.row].description = summTextField.text ?? ""
@@ -97,6 +107,8 @@ class UAMainViewController: UITableViewController {
         tableView.reloadData()
     }
 }
+
+//MARK: - extensions
 
 extension UAMainViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
