@@ -35,7 +35,7 @@ class UAStatisticsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = NSLocalizedString("Second title", comment: "")
+        self.title = "Second title".localized
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.view.backgroundColor = .white
         self.view.addSubview(self.tableView)

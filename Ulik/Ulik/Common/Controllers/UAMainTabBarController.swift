@@ -10,7 +10,7 @@ import UIKit
 class UAMainTabBarController: UITabBarController {
 
     private lazy var mainTabBarItem: UITabBarItem = {
-        let view = UITabBarItem(title: NSLocalizedString("Main title", comment: ""),
+        let view = UITabBarItem(title: "Main title".localized,
                                 image: UIImage(systemName: "cart"),
                                 selectedImage: UIImage(systemName: "cart.fill"))
 
@@ -18,7 +18,7 @@ class UAMainTabBarController: UITabBarController {
     }()
 
     private lazy var statisticsTabBarItem: UITabBarItem = {
-        let view = UITabBarItem(title: NSLocalizedString("Second title", comment: ""),
+        let view = UITabBarItem(title: "Second title".localized,
                                 image: UIImage(systemName: "chart.bar.xaxis"),
                                 selectedImage: UIImage(systemName: "chart.bar.xaxis.fill"))
 
@@ -26,7 +26,7 @@ class UAMainTabBarController: UITabBarController {
     }()
 
     private lazy var listTabBarItem: UITabBarItem = {
-        let view = UITabBarItem(title: NSLocalizedString("Third title", comment: ""),
+        let view = UITabBarItem(title: "Third title".localized,
                                 image: UIImage(systemName: "dollarsign.circle"),
                                 selectedImage: UIImage(systemName: "dollarsign.circle.fill"))
 
@@ -34,7 +34,7 @@ class UAMainTabBarController: UITabBarController {
     }()
 
     private lazy var settingsTabBarItem: UITabBarItem = {
-        let view = UITabBarItem(title: NSLocalizedString("Fourth title", comment: ""),
+        let view = UITabBarItem(title: "Fourth title".localized,
                                 image: UIImage(systemName: "gear"),
                                 selectedImage: UIImage(systemName: "gear.fill"))
 
