@@ -5,7 +5,6 @@
 //  Created by macbook on 4/15/21.
 //
 
-import Foundation
 import UIKit
 
 struct UACategories {

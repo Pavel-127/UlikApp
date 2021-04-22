@@ -9,7 +9,7 @@ import UIKit
 
 class UAMainViewController: UITableViewController {
 
-    let addButton = UIBarButtonItem(systemItem: .add)
+    private let addButton = UIBarButtonItem(systemItem: .add)
 
     private var categories: [UACategories] = UAAllCatigories.sh.allCategorise {
         didSet {
@@ -23,7 +23,7 @@ class UAMainViewController: UITableViewController {
         let search = UISearchController()
         search.hidesNavigationBarDuringPresentation = false
         search.obscuresBackgroundDuringPresentation = false
-        search.searchBar.placeholder = NSLocalizedString("Placeholder search", comment: "")
+        search.searchBar.placeholder = "Placeholder search".localized
 
         return search
     }()
@@ -31,7 +31,7 @@ class UAMainViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
-        self.navigationItem.title = NSLocalizedString("Main title", comment: "")
+        self.navigationItem.title = "Main title".localized
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.searchController.searchResultsUpdater = self
         self.navigationItem.searchController = self.searchController
@@ -62,10 +62,10 @@ class UAMainViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        let alertController = UIAlertController(title: NSLocalizedString("Alert title", comment: ""), message: "", preferredStyle: .alert)
+        let alertController = UIAlertController(title: ("Alert title".localized), message: "", preferredStyle: .alert)
         let confirmAction = UIAlertAction(title: "OK", style: .default) { (_) in
             if let summTextField = alertController.textFields?[0] {
-                self.filtredCategories[indexPath.row].description = summTextField.text!
+                self.filtredCategories[indexPath.row].description = summTextField.text ?? ""
                 self.tableView.reloadRows(at: [indexPath], with: .fade)
             }
         }

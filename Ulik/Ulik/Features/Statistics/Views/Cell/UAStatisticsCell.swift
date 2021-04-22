@@ -60,13 +60,8 @@ class UAStatisticsCell: UITableViewCell {
         self.containerView.addSubview(self.imageName)
         self.containerView.addSubview(self.summLabel)
 
-        self.setNeedsUpdateConstraints()
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-    }
     override func updateConstraints() {
         self.containerView.snp.updateConstraints { (make) in
             make.top.equalToSuperview().inset(10)
@@ -80,15 +75,18 @@ class UAStatisticsCell: UITableViewCell {
             make.height.equalTo(45)
             make.top.equalToSuperview().inset(10)
             make.left.equalToSuperview().inset(20)
+            make.bottom.equalTo(self.imageName.snp.top).inset(5)
         }
 
         self.imageName.snp.updateConstraints { (make) in
             make.top.equalTo(self.mainImageView.snp.bottom).offset(5)
             make.left.equalToSuperview().inset(20)
+            make.right.bottom.equalToSuperview().inset(10)
         }
 
         self.summLabel.snp.updateConstraints { (make) in
             make.top.bottom.equalToSuperview().inset(15)
+            make.left.equalTo(self.mainImageView.snp.right).offset(210)
             make.right.equalToSuperview().inset(20)
         }
 
@@ -102,5 +100,4 @@ class UAStatisticsCell: UITableViewCell {
 
         self.setNeedsUpdateConstraints()
     }
-
 }

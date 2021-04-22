@@ -9,7 +9,7 @@ import UIKit
 import WebKit
 
 class UAListViewController: UIViewController {
-
+    
     private lazy var webView: WKWebView = {
         let view = WKWebView()
         view.navigationDelegate = self
@@ -26,14 +26,14 @@ class UAListViewController: UIViewController {
 
         self.view.addSubview(webView)
 
-        let url = URL(string: "https://myfin.by/converter")!
-           webView.load(URLRequest(url: url))
+        guard let url = URL(string: "https://myfin.by/converter") else { return }
+        webView.load(URLRequest(url: url))
 
-             self.webView.snp.makeConstraints { (make) in
-                 make.edges.equalToSuperview()
-             }
+        self.webView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
         }
     }
+}
 
 extension UAListViewController: WKNavigationDelegate {
 

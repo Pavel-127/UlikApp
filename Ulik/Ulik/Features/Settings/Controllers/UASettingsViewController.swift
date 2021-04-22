@@ -12,7 +12,7 @@ class UASettingsViewController: UIViewController {
 
     private lazy var loginButton: UIButton = {
         let login = UIButton()
-        login.setTitle(NSLocalizedString("Login title", comment: ""), for: UIControl.State())
+        login.setTitle(("Login title".localized), for: UIControl.State())
         login.setTitleColor(.blue, for: UIControl.State())
         login.titleLabel?.font = UIFont.systemFont(ofSize: 20)
         login.translatesAutoresizingMaskIntoConstraints = false
@@ -23,7 +23,7 @@ class UASettingsViewController: UIViewController {
 
     private lazy var registerButton: UIButton = {
         let register = UIButton()
-        register.setTitle(NSLocalizedString("Register title", comment: ""), for: UIControl.State())
+        register.setTitle(("Register title".localized), for: UIControl.State())
         register.setTitleColor(.blue, for: UIControl.State())
         register.titleLabel?.font = UIFont.systemFont(ofSize: 20)
         register.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
@@ -35,7 +35,7 @@ class UASettingsViewController: UIViewController {
     private lazy var currencyTextField: UITextField = {
         let currency = UITextField()
         currency.translatesAutoresizingMaskIntoConstraints = false
-        currency.placeholder = NSLocalizedString("Placeholder currency", comment: "")
+        currency.placeholder = "Placeholder currency".localized
         currency.borderStyle = .roundedRect
         currency.inputView = self.picker
         currency.inputAccessoryView = self.doneToolBar
@@ -70,7 +70,7 @@ class UASettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = NSLocalizedString("Fourth title", comment: "")
+        self.title = "Fourth title".localized
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.view.backgroundColor = .white
         self.view.addSubview(loginButton)
@@ -94,6 +94,7 @@ class UASettingsViewController: UIViewController {
             make.top.equalTo(self.registerButton.snp.bottom).offset(40)
             make.left.equalToSuperview().inset(20)
             make.right.equalToSuperview().inset(20)
+            make.bottom.equalToSuperview().inset(350)
         }
 
         super.updateViewConstraints()
@@ -110,7 +111,6 @@ class UASettingsViewController: UIViewController {
     @objc private func doneTapped() {
         self.currencyTextField.resignFirstResponder()
         UAUserDefaults.sh.saveCurrency(UACurrency.BYN)
-
     }
 }
 
