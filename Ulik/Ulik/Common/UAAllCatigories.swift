@@ -33,5 +33,5 @@ class UAAllCatigories {
     ]
 
     private init() {}
-
+    
 }
